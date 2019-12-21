@@ -1,0 +1,89 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-07 13:21:09.787291 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:CGC 8065
+  interface hash: 47be9eb3ee9596bf67f3a8cb0a26de05
+  ABI hash: adccae92d3b8e6154554562c2c03e794
+  export-list hash: f5935112dbfeb506304445d4e0ec1a9a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: d0a78e7b344f95c7406be35c9b75e196
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  CGC.runCGC
+  CGC.runCGCwithVandN
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 integer-gmp-1.0.2.0 mtl-2.2.2 primitive-0.6.4.0
+                      transformers-0.5.6.2 vector-0.12.0.3
+orphans: vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array vector-0.12.0.3:Data.Vector
+import  -/  base-4.12.0.0:Control.Applicative 2ae514eb141d45774730765c61bb41c0
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.Maybe 9b76a39e833465c3c5b3c078b431417f
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Err ea5e313ef4146b40b5d8b27aa168e736
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  mtl-2.2.2:Control.Monad.State.Class 243c828469104fb94563be0ea268f418
+import  -/  mtl-2.2.2:Control.Monad.State.Lazy 7d371b0031c45953f2f91cf2f08d9b31
+import  -/  transformers-0.5.6.2:Control.Monad.Trans.State.Lazy 0c22827dedcb94d04bf072c00f8e95c2
+import  -/  vector-0.12.0.3:Data.Vector 22c3ffe47a2f7f315b8c1228ed93f196
+76a5bc14679247adecae60712adf6436
+  $fEqCGC :: GHC.Classes.Eq CGC.CGC
+  DFunId
+76a5bc14679247adecae60712adf6436
+  $fShowCGC :: GHC.Show.Show CGC.CGC
+  DFunId
+ea9fcd0f12de1b37f8647c4df645f131
+  $tc'CGC :: GHC.Types.TyCon
+f2d50f66e3ceea0466a0f4adcdfdcfa9
+  $tcCGC :: GHC.Types.TyCon
+8e6544521b8bc0f1c1a431ee17d3bd0f
+  $trModule :: GHC.Types.Module
+76a5bc14679247adecae60712adf6436
+  data CGC
+    = CGC {mem :: Data.Vector.Vector GHC.Types.Int,
+           ip :: GHC.Types.Int}
+61275d247f904f592fb612d1a0a64882
+  type CGCState =
+    Control.Monad.Trans.State.Lazy.State CGC.CGC :: * -> *
+76a5bc14679247adecae60712adf6436
+  ip :: CGC.CGC -> GHC.Types.Int
+  RecSel Left CGC.CGC
+76a5bc14679247adecae60712adf6436
+  mem :: CGC.CGC -> Data.Vector.Vector GHC.Types.Int
+  RecSel Left CGC.CGC
+03c19c0c25e1a0f576d465cee2699ab5
+  runCGC :: [GHC.Types.Int] -> GHC.Types.Int
+fd8f61d835a755f43dc839ea602d9fb0
+  runCGCwithVandN ::
+    [GHC.Types.Int] -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Int
+instance GHC.Classes.Eq [CGC.CGC] = CGC.$fEqCGC
+instance GHC.Show.Show [CGC.CGC] = CGC.$fShowCGC
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

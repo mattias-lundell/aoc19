@@ -1,0 +1,66 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-12 21:48:45.870317 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:Day18 8065
+  interface hash: 8e5504e07040c14bc79345e6134d1f93
+  ABI hash: 14e001335aeb180cf5532a0a09788989
+  export-list hash: b914a1ec66e812269dd1c0cd5be9726b
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day18.day18a
+  Day18.day18b
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+e0723afb19c3935de811369eb13c27e7
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day18.$trModule3 Day18.$trModule1) -}
+d7aa834748505dd3ad388e903517aa40
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day18.$trModule2) -}
+44c8852063a2cb7417e41acfd1ba7a0a
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day18"#) -}
+849644657048be495c957ca81a46b488
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day18.$trModule4) -}
+52574dce526a107433f261fead254062
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh"#) -}
+699be3205347ccafdbc3636b289fcc50
+  day18a :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                (GHC.Base.id @ GHC.Base.String) -}
+93e611cf286a0379e77b56a6b8055801
+  day18b :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (0, True, True)
+                (GHC.Base.id @ GHC.Base.String) -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

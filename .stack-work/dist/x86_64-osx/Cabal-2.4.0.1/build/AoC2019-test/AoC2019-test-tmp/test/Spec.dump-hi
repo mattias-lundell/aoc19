@@ -1,0 +1,86 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-11 08:08:20.098762 UTC
+
+interface main:Main 8065
+  interface hash: 6e2e817c94261bf145123812016e9644
+  ABI hash: 3fee26b8a334b85b7d4bf40a06f004dc
+  export-list hash: 5e2ca8f456dd880521bcd3119250e73f
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: adf17e4eb66fd0b95cb793c7096d64d7
+  opt_hash: d0a78e7b344f95c7406be35c9b75e196
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: AoC2019-0.0.0 ansi-terminal-0.9.1
+                      ansi-wl-pprint-0.6.9 array-0.5.3.0 async-2.2.2 base-4.12.0.0
+                      binary-0.8.6.0 bytestring-0.10.8.2 call-stack-0.1.0 clock-0.8
+                      colour-2.3.5 containers-0.6.0.1 deepseq-1.4.4.0 ghc-prim-0.5.3
+                      hashable-1.2.7.0 integer-gmp-1.0.2.0 mtl-2.2.2
+                      optparse-applicative-0.14.3.0 primitive-0.6.4.0 process-1.6.5.0
+                      split-0.2.3.3 stm-2.5.0.0 tagged-0.8.6 tasty-1.2.3
+                      tasty-hunit-0.10.0.2 text-1.2.3.1 transformers-0.5.6.2
+                      unbounded-delays-0.1.1.0 unix-2.7.2.2 vector-0.12.0.3
+orphans: vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         stm-2.5.0.0:Control.Monad.STM
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         colour-2.3.5:Data.Colour text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         clock-0.8:System.Clock containers-0.6.0.1:Data.Graph
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array tagged-0.8.6:Data.Tagged
+                         tasty-1.2.3:Test.Tasty.Core text-1.2.3.1:Data.Text
+                         text-1.2.3.1:Data.Text.Lazy vector-0.12.0.3:Data.Vector
+import  -/  AoC2019-0.0.0:AoC2019 1ea846b57b617e687d849346b329a5a8
+import  -/  base-4.12.0.0:Data.Bifunctor c6b94a4350abddc02c676eba95d481f0
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Traversable d2c09bff1e4f0c871306c3ff8aa4dc36
+import  -/  base-4.12.0.0:Data.Tuple c719fc29608fe81c10bee9a1bf1e05ff
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  tasty-1.2.3:Test.Tasty 315eff116ee660c7446cd86afe637777
+import  -/  tasty-1.2.3:Test.Tasty.Core 22ea8eddaa5491fe898080d72b706678
+import  -/  tasty-hunit-0.10.0.2:Test.Tasty.HUnit 8e1001ef02f557b27b088dc5ca6e9694
+import  -/  tasty-hunit-0.10.0.2:Test.Tasty.HUnit.Orig c579b574eb19e9736f18c4744f3d8cf2
+import  -/  text-1.2.3.1:Data.Text 681b9c3df5b4e4b4e23ef5f840f0b692
+import  -/  text-1.2.3.1:Data.Text.IO b6cfa03869c429fbaab046e2a0dbffff
+import  -/  text-1.2.3.1:Data.Text.Show b788b7edd0f190b1a7c4f4aba0e35f18
+1ca40dc83a9c879effdb760462cc9a2d
+  $trModule :: GHC.Types.Module
+8a003a8627e6dbfb4e082e8733b2589f
+  main :: GHC.Types.IO ()
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

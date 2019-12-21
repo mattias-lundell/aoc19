@@ -1,0 +1,35 @@
+Configuring alex-3.2.5...
+Preprocessing executable 'alex' for alex-3.2.5..
+Building executable 'alex' for alex-3.2.5..
+[ 1 of 22] Compiling Data.Ranged.Boundaries ( src/Data/Ranged/Boundaries.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Data/Ranged/Boundaries.o )
+[ 2 of 22] Compiling Data.Ranged.Ranges ( src/Data/Ranged/Ranges.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Data/Ranged/Ranges.o )
+[ 3 of 22] Compiling Data.Ranged.RangedSet ( src/Data/Ranged/RangedSet.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Data/Ranged/RangedSet.o )
+
+[;1msrc/Data/Ranged/RangedSet.hs:31:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Semigroup’ is redundant
+      except perhaps to import instances from ‘Data.Semigroup’
+    To import instances alone, use: import Data.Semigroup()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m31 |[0m[0m [;1m[35mimport Data.Semigroup[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 4 of 22] Compiling Data.Ranged      ( src/Data/Ranged.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Data/Ranged.o )
+[ 5 of 22] Compiling Map              ( src/Map.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Map.o )
+[ 6 of 22] Compiling Paths_alex       ( .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/autogen/Paths_alex.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Paths_alex.o )
+[ 7 of 22] Compiling Set              ( src/Set.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Set.o )
+[ 8 of 22] Compiling DFS              ( src/DFS.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/DFS.o )
+[ 9 of 22] Compiling Sort             ( src/Sort.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Sort.o )
+[10 of 22] Compiling UTF8             ( src/UTF8.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/UTF8.o )
+[11 of 22] Compiling CharSet          ( src/CharSet.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/CharSet.o )
+[12 of 22] Compiling Util             ( src/Util.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Util.o )
+[13 of 22] Compiling AbsSyn           ( src/AbsSyn.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/AbsSyn.o )
+[14 of 22] Compiling ParseMonad       ( src/ParseMonad.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/ParseMonad.o )
+[15 of 22] Compiling Scan             ( src/Scan.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Scan.o )
+[16 of 22] Compiling Parser           ( src/Parser.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Parser.o )
+[17 of 22] Compiling Output           ( src/Output.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Output.o )
+[18 of 22] Compiling NFA              ( src/NFA.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/NFA.o )
+[19 of 22] Compiling Info             ( src/Info.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Info.o )
+[20 of 22] Compiling DFAMin           ( src/DFAMin.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/DFAMin.o )
+[21 of 22] Compiling DFA              ( src/DFA.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/DFA.o )
+[22 of 22] Compiling Main             ( src/Main.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex-tmp/Main.o )
+Linking .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/alex/alex ...
+Installing executable alex in /Users/mattias/.stack/snapshots/x86_64-osx/lts-14.16/8.6.5/bin

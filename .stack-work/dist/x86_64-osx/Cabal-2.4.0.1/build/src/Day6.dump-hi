@@ -1,0 +1,1120 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-16 21:09:09.710509 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:Day6 8065
+  interface hash: 23c2b2a4211e9449994d2c64fc502c65
+  ABI hash: acfcdd56ef520674261239ac90e7d71c
+  export-list hash: cbc1474bad16dbd00d771fa3683080a8
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day6.day06a
+  Day6.day06b
+  Day6.toDigits
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0
+                      containers-0.6.0.1 deepseq-1.4.4.0 ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0 mtl-2.2.2 primitive-0.6.4.0 split-0.2.3.3
+                      transformers-0.5.6.2 vector-0.12.0.3
+orphans: vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array vector-0.12.0.3:Data.Vector
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Maybe 9b76a39e833465c3c5b3c078b431417f
+import  -/  base-4.12.0.0:Data.Tuple c719fc29608fe81c10bee9a1bf1e05ff
+import  -/  base-4.12.0.0:Debug.Trace 60f75ad789dcddb29321db1cb21ccd4c
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Enum 87204abed08db8735fc0be5ab48689aa
+import  -/  base-4.12.0.0:GHC.Err ea5e313ef4146b40b5d8b27aa168e736
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  containers-0.6.0.1:Data.IntMap.Internal 0a8deddddec3c1f825316c678c408bab
+import  -/  containers-0.6.0.1:Data.IntMap.Lazy 84175329dc1a4413dcd3a43f88bcb15d
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  mtl-2.2.2:Control.Monad.State.Class 243c828469104fb94563be0ea268f418
+import  -/  mtl-2.2.2:Control.Monad.State.Lazy 7d371b0031c45953f2f91cf2f08d9b31
+import  -/  split-0.2.3.3:Data.List.Split 3518b4851dc357bd81ca9eb7a13694f0
+import  -/  split-0.2.3.3:Data.List.Split.Internals b4ab8dde94aedb7514b1f8d89c369cbe
+import  -/  transformers-0.5.6.2:Control.Monad.Trans.State.Lazy 0c22827dedcb94d04bf072c00f8e95c2
+import  -/  vector-0.12.0.3:Data.Vector 22c3ffe47a2f7f315b8c1228ed93f196
+f96dd3fc9825ba6263fdc160acb9442f
+  $fEqCPU :: GHC.Classes.Eq Day6.CPU
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Day6.CPU Day6.$fEqCPU_$c== Day6.$fEqCPU_$c/= -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fEqCPU_$c/= :: Day6.CPU -> Day6.CPU -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,1*U(U),1*U,1*U,1*U(U))><S(SLLLL),1*U(1*U,1*U(U),1*U,1*U,1*U(U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Day6.CPU) (y :: Day6.CPU) ->
+                 case Day6.$fEqCPU_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fEqCPU_$c== :: Day6.CPU -> Day6.CPU -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U,1*U(U),1*U,1*U,1*U(U))><S(SLLLL),1*U(1*U,1*U(U),1*U,1*U,1*U(U))>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Day6.CPU) (w1 :: Day6.CPU) ->
+                 case w of ww { Day6.CPU ww1 ww2 ww3 ww4 ww5 ->
+                 case w1 of ww6 { Day6.CPU ww7 ww8 ww9 ww10 ww11 ->
+                 Day6.$w$c== ww1 ww2 ww3 ww4 ww5 ww7 ww8 ww9 ww10 ww11 } }) -}
+8315c2f0f702e320af1e757b3b328a85
+  $fEqOp :: GHC.Classes.Eq Day6.Op
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Day6.Op Day6.$fEqOp_$c== Day6.$fEqOp_$c/= -}
+8315c2f0f702e320af1e757b3b328a85
+  $fEqOp_$c/= :: Day6.Op -> Day6.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Day6.Op) (y :: Day6.Op) ->
+                 case Day6.$fEqOp_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+8315c2f0f702e320af1e757b3b328a85
+  $fEqOp_$c== :: Day6.Op -> Day6.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+928752f1cbcebcc0d25245d295be2096
+  $fEqParam :: GHC.Classes.Eq Day6.Param
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day6.Param Day6.$fEqParam_$c== Day6.$fEqParam_$c/= -}
+928752f1cbcebcc0d25245d295be2096
+  $fEqParam_$c/= :: Day6.Param -> Day6.Param -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Day6.Param) (y :: Day6.Param) ->
+                 case x of wild {
+                   Day6.Ptr a1
+                   -> case y of wild1 {
+                        Day6.Ptr b1
+                        -> case GHC.Classes.eqInt a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False }
+                        Day6.Val ipv -> GHC.Types.True }
+                   Day6.Val a1
+                   -> case y of wild1 {
+                        Day6.Ptr ipv -> GHC.Types.True
+                        Day6.Val b1
+                        -> case GHC.Classes.eqInt a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+928752f1cbcebcc0d25245d295be2096
+  $fEqParam_$c== :: Day6.Param -> Day6.Param -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Day6.Param) (ds1 :: Day6.Param) ->
+                 case ds of wild {
+                   Day6.Ptr a1
+                   -> case ds1 of wild1 {
+                        Day6.Ptr b1 -> GHC.Classes.eqInt a1 b1
+                        Day6.Val ipv -> GHC.Types.False }
+                   Day6.Val a1
+                   -> case ds1 of wild1 {
+                        Day6.Ptr ipv -> GHC.Types.False
+                        Day6.Val b1 -> GHC.Classes.eqInt a1 b1 } }) -}
+08f7975031ea50c352a14ee83f666d40
+  $fEqPointer :: GHC.Classes.Eq Day6.Pointer
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day6.Pointer
+                  GHC.Classes.eqInt
+                    `cast`
+                  (Sym (Day6.N:Pointer[0])
+                   ->_R Sym (Day6.N:Pointer[0])
+                   ->_R <GHC.Types.Bool>_R)
+                  GHC.Classes.neInt
+                    `cast`
+                  (Sym (Day6.N:Pointer[0])
+                   ->_R Sym (Day6.N:Pointer[0])
+                   ->_R <GHC.Types.Bool>_R) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fShowCPU :: GHC.Show.Show Day6.CPU
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day6.CPU
+                  Day6.$fShowCPU_$cshowsPrec
+                  Day6.$fShowCPU_$cshow
+                  Day6.$fShowCPU_$cshowList -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fShowCPU1 :: Day6.CPU -> GHC.Show.ShowS
+  {- Arity: 1, Strictness: <S,1*U(1*U,U(U),U,U,U(U))>,
+     Unfolding: (\ (w :: Day6.CPU) ->
+                 case w of ww { Day6.CPU ww1 ww2 ww3 ww4 ww5 ->
+                 Day6.$w$cshowsPrec 0# ww1 ww2 ww3 ww4 ww5 }) -}
+34e41c50a5387db7e1e96afe03f1ef79
+  $fShowCPU2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fShowCPU_$cshow :: Day6.CPU -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U,U(U),U,U,U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day6.CPU) ->
+                 Day6.$fShowCPU_$cshowsPrec
+                   Day6.$fShowCPU2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fShowCPU_$cshowList :: [Day6.CPU] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day6.CPU]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day6.CPU Day6.$fShowCPU1 ls s) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  $fShowCPU_$cshowsPrec ::
+    GHC.Types.Int -> Day6.CPU -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(S),1*U(U)><S,1*U(1*U,U(U),U,U,U(U))>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Day6.CPU) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Day6.CPU ww3 ww4 ww5 ww6 ww7 ->
+                 Day6.$w$cshowsPrec ww1 ww3 ww4 ww5 ww6 ww7 } }) -}
+8315c2f0f702e320af1e757b3b328a85
+  $fShowOp :: GHC.Show.Show Day6.Op
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day6.Op
+                  Day6.$fShowOp_$cshowsPrec
+                  Day6.$fShowOp_$cshow
+                  Day6.$fShowOp_$cshowList -}
+8315c2f0f702e320af1e757b3b328a85
+  $fShowOp1 :: Day6.Op -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Day6.$fShowOp_$cshowsPrec Day6.$fShowCPU2) -}
+8315c2f0f702e320af1e757b3b328a85
+  $fShowOp_$cshow :: Day6.Op -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day6.Op) ->
+                 Day6.$fShowOp_$cshowsPrec
+                   Day6.$fShowCPU2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+8315c2f0f702e320af1e757b3b328a85
+  $fShowOp_$cshowList :: [Day6.Op] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day6.Op]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day6.Op Day6.$fShowOp1 ls s) -}
+8315c2f0f702e320af1e757b3b328a85
+  $fShowOp_$cshowsPrec :: GHC.Types.Int -> Day6.Op -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+928752f1cbcebcc0d25245d295be2096
+  $fShowParam :: GHC.Show.Show Day6.Param
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day6.Param
+                  Day6.$fShowParam_$cshowsPrec
+                  Day6.$fShowParam_$cshow
+                  Day6.$fShowParam_$cshowList -}
+928752f1cbcebcc0d25245d295be2096
+  $fShowParam1 :: Day6.Param -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (w :: Day6.Param) (w1 :: GHC.Base.String) ->
+                 Day6.$w$cshowsPrec1 0# w w1) -}
+5413fa6d80c568195666b39bd3e19b35
+  $fShowParam2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Val "#) -}
+a37f7c8e883e870fd1c4ce357849d8cf
+  $fShowParam3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Ptr "#) -}
+928752f1cbcebcc0d25245d295be2096
+  $fShowParam_$cshow :: Day6.Param -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day6.Param) ->
+                 Day6.$fShowParam_$cshowsPrec
+                   Day6.$fShowCPU2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+928752f1cbcebcc0d25245d295be2096
+  $fShowParam_$cshowList :: [Day6.Param] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day6.Param]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day6.Param Day6.$fShowParam1 ls s) -}
+928752f1cbcebcc0d25245d295be2096
+  $fShowParam_$cshowsPrec ::
+    GHC.Types.Int -> Day6.Param -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Day6.Param)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Day6.$w$cshowsPrec1 ww1 w1 w2 }) -}
+08f7975031ea50c352a14ee83f666d40
+  $fShowPointer :: GHC.Show.Show Day6.Pointer
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day6.Pointer
+                  Day6.$fShowPointer_$cshowsPrec
+                  Day6.$fShowPointer_$cshow
+                  Day6.$fShowPointer_$cshowList -}
+08f7975031ea50c352a14ee83f666d40
+  $fShowPointer1 :: Day6.Pointer -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: (\ (w :: Day6.Pointer) (w1 :: GHC.Base.String) ->
+                 Day6.$w$cshowsPrec2 0# w w1) -}
+0c362185e8aa4f40934a1727c732ccbb
+  $fShowPointer2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+8a2a208033064f4c548829f8504e7f0d
+  $fShowPointer3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("getPtr = "#) -}
+11c1e9806ffb0150c30748a9e083ae4f
+  $fShowPointer4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pointer {"#) -}
+7fe7024dc721191f41d07c01e5a7be1d
+  $fShowPointer5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Day6.$fShowPointer2) -}
+08f7975031ea50c352a14ee83f666d40
+  $fShowPointer_$cshow :: Day6.Pointer -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(U)>,
+     Unfolding: (\ (x :: Day6.Pointer) ->
+                 GHC.CString.unpackAppendCString#
+                   Day6.$fShowPointer4
+                   (GHC.CString.unpackAppendCString#
+                      Day6.$fShowPointer3
+                      (case x `cast` (Day6.N:Pointer[0]) of ww2 { GHC.Types.I# ww3 ->
+                       case GHC.Show.$wshowSignedInt
+                              0#
+                              ww3
+                              Day6.$fShowPointer5 of ww4 { (#,#) ww5 ww6 ->
+                       GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))) -}
+08f7975031ea50c352a14ee83f666d40
+  $fShowPointer_$cshowList :: [Day6.Pointer] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day6.Pointer]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day6.Pointer Day6.$fShowPointer1 ls s) -}
+08f7975031ea50c352a14ee83f666d40
+  $fShowPointer_$cshowsPrec ::
+    GHC.Types.Int -> Day6.Pointer -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S),1*U(U)><L,1*U(U)><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Day6.Pointer)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Day6.$w$cshowsPrec2 ww1 w1 w2 }) -}
+03f137969762ed6ba21b22e1413e953f
+  $tc'ADD :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2514359573322054646##
+                   17849134299961288290##
+                   Day6.$trModule
+                   Day6.$tc'ADD2
+                   0#
+                   Day6.$tc'ADD1) -}
+6e7f85b2b7010f7cefac69c0d60fdeb9
+  $tc'ADD1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+9f16e4adbc2a26bd0e34f7b39a132d8f
+  $tc'ADD2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'ADD3) -}
+b0b7ca6b467873bd35696a62589efcf6
+  $tc'ADD3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ADD"#) -}
+00554fa5933bf8f8bed3600f451b2408
+  $tc'CMPEQ :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17682595617612599549##
+                   15289938244741151511##
+                   Day6.$trModule
+                   Day6.$tc'CMPEQ1
+                   0#
+                   Day6.$tc'ADD1) -}
+606ce94ff8952092855420b518823a19
+  $tc'CMPEQ1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'CMPEQ2) -}
+2f70c73b013e3e339169e607e4a6a03b
+  $tc'CMPEQ2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMPEQ"#) -}
+183eb82b290a029d562c226f4ec819db
+  $tc'CMPLT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6975198991835674003##
+                   8865059800892155071##
+                   Day6.$trModule
+                   Day6.$tc'CMPLT1
+                   0#
+                   Day6.$tc'ADD1) -}
+c81728008df529d2210b44ef545b7024
+  $tc'CMPLT1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'CMPLT2) -}
+e86e2944a2d2612834a6dd295f5069bc
+  $tc'CMPLT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMPLT"#) -}
+6b5298ac18e427e2d3977c42a14e51a4
+  $tc'CPU :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2227628450815237277##
+                   14561700408368624930##
+                   Day6.$trModule
+                   Day6.$tc'CPU2
+                   0#
+                   Day6.$tc'CPU1) -}
+377c7609355553730d1b0ffc12974c6c
+  $tc'CPU1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+aa67c3e567fe40d8cda48338d7820f24
+  $tc'CPU2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'CPU3) -}
+841b97fe38d4b355810682ef9fb6c717
+  $tc'CPU3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CPU"#) -}
+58f0ca207dee818d8c537b4890bfa2e6
+  $tc'HALT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17094613572355014712##
+                   4121916087934707793##
+                   Day6.$trModule
+                   Day6.$tc'HALT2
+                   0#
+                   Day6.$tc'HALT1) -}
+e05c880f8c07e67433ddc448d3226b2e
+  $tc'HALT1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+90b9aed2b8e95235fecb4b1c5a82bbc6
+  $tc'HALT2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'HALT3) -}
+ecf1491933b49b6c1fa35aa70c9f6693
+  $tc'HALT3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'HALT"#) -}
+22d1c803fb46449efe042e79e8c7b20f
+  $tc'INPUT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15278807805025534737##
+                   16075394876086897824##
+                   Day6.$trModule
+                   Day6.$tc'INPUT2
+                   0#
+                   Day6.$tc'INPUT1) -}
+f42cf27cb4c4dd5d56ea7de176b30752
+  $tc'INPUT1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+eff5c4a6ed46621232a2763acef43426
+  $tc'INPUT2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'INPUT3) -}
+20b58930e0f9b2394cf231ca49e1fa2a
+  $tc'INPUT3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'INPUT"#) -}
+5d59237ba7708da9a7bcc227ac81338c
+  $tc'JNZ :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   45172253710473257##
+                   12050605793092355656##
+                   Day6.$trModule
+                   Day6.$tc'JNZ2
+                   0#
+                   Day6.$tc'JNZ1) -}
+b6d0e698371f68d0fdaf885c4c58dfcc
+  $tc'JNZ1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+1b2a29279530f3c13fcadee3b1f522aa
+  $tc'JNZ2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'JNZ3) -}
+53479b8459cc8785aea2e20b5ec8698e
+  $tc'JNZ3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'JNZ"#) -}
+164aa2cf2e883b6b28e520837bfad797
+  $tc'JZ :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6416273137626013816##
+                   1853355925359897750##
+                   Day6.$trModule
+                   Day6.$tc'JZ1
+                   0#
+                   Day6.$tc'JNZ1) -}
+f0147432e81fbef0750bd97ecc2f8b92
+  $tc'JZ1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'JZ2) -}
+f068db906126314ce6f74e5c285e67c1
+  $tc'JZ2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'JZ"#) -}
+4810124f28930d3a30a317c493fba7c7
+  $tc'MUL :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16512906707132519048##
+                   11674693204804200428##
+                   Day6.$trModule
+                   Day6.$tc'MUL1
+                   0#
+                   Day6.$tc'ADD1) -}
+a005e8765170c179ca174ae5e21934ee
+  $tc'MUL1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'MUL2) -}
+176e568a90b0db01ab4f67fe653a9302
+  $tc'MUL2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'MUL"#) -}
+40ce4e9ba981f5e7900163e8107d7d93
+  $tc'OUTPUT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5560298086602494708##
+                   13518675858327958620##
+                   Day6.$trModule
+                   Day6.$tc'OUTPUT1
+                   0#
+                   Day6.$tc'INPUT1) -}
+ced29961480bb4d8b8dfdfc3945c2abe
+  $tc'OUTPUT1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'OUTPUT2) -}
+bb05ab48b586fd93aa86a08b076aa7b9
+  $tc'OUTPUT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'OUTPUT"#) -}
+d46734f2b80ac20434b21a53dd4d5e2d
+  $tc'Pointer :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8654713228718116070##
+                   7761954226883711751##
+                   Day6.$trModule
+                   Day6.$tc'Pointer2
+                   0#
+                   Day6.$tc'Pointer1) -}
+ae7bf03a64b72f8dc0b77398b766606d
+  $tc'Pointer1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+642d360705f77cb7b48642a043e92713
+  $tc'Pointer2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'Pointer3) -}
+6c7f7e01ca17c059572b235f86fa9409
+  $tc'Pointer3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Pointer"#) -}
+9fd5965db816d39d15236a4704b9b9d0
+  $tc'Ptr :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1546855378841320256##
+                   16754447532580914500##
+                   Day6.$trModule
+                   Day6.$tc'Ptr2
+                   0#
+                   Day6.$tc'Ptr1) -}
+6dff46b7dd0bef5f81519aebf2d4f52d
+  $tc'Ptr1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7eb24aee0f7d2f7ef3d81706c618064c
+  $tc'Ptr2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'Ptr3) -}
+96464a6da1d6d39d3fb339ff0a2c86c2
+  $tc'Ptr3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Ptr"#) -}
+a070f582aa3dd16762688330b7eb7c36
+  $tc'RB :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   866537095342266870##
+                   18320616533953252066##
+                   Day6.$trModule
+                   Day6.$tc'RB1
+                   0#
+                   Day6.$tc'INPUT1) -}
+cae87ef5e006f0634c3906ac1609e478
+  $tc'RB1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'RB2) -}
+3e1b41ce0d126280cc92b47fb69cca19
+  $tc'RB2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'RB"#) -}
+d1c566471681fcb92392fea335631fb8
+  $tc'Val :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6039191984663410660##
+                   11515382371642437163##
+                   Day6.$trModule
+                   Day6.$tc'Val1
+                   0#
+                   Day6.$tc'Ptr1) -}
+c6e42b0777ada1fbbd7160df4be39182
+  $tc'Val1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tc'Val2) -}
+91724212d809488aa38745f144a1bbfc
+  $tc'Val2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Val"#) -}
+67a4b4f3295a41c17999f4f6770134b4
+  $tcCPU :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   483790598330992510##
+                   3706578205378030065##
+                   Day6.$trModule
+                   Day6.$tcCPU1
+                   0#
+                   GHC.Types.krep$*) -}
+8ac6f37f7e6c04cb356067e8ade66049
+  $tcCPU1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tcCPU2) -}
+652ec4f31c5d93cfc3211ed94f7a463f
+  $tcCPU2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CPU"#) -}
+aa753092522d1cb49394ea115d37f8ad
+  $tcOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3334463803249277440##
+                   4606647601257826756##
+                   Day6.$trModule
+                   Day6.$tcOp1
+                   0#
+                   GHC.Types.krep$*) -}
+bfc280b8c4d4950b51fcabe35a7228bf
+  $tcOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tcOp2) -}
+c1fe8642ef656495018fe5cf90146fea
+  $tcOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Op"#) -}
+fe873d8ecf31522498414db0471b9d9c
+  $tcParam :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15739307016642778882##
+                   1783602065426793961##
+                   Day6.$trModule
+                   Day6.$tcParam1
+                   0#
+                   GHC.Types.krep$*) -}
+3b96465ecdfee70d35a30da45b0cc5ec
+  $tcParam1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tcParam2) -}
+04c6b784ac70a831250ea9976ab45d35
+  $tcParam2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Param"#) -}
+05aa17e41561813fb273840e6854eaf3
+  $tcPointer :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9554223735508722243##
+                   286051901331062636##
+                   Day6.$trModule
+                   Day6.$tcPointer1
+                   0#
+                   GHC.Types.krep$*) -}
+29bad33b9e15ce7aadb26155f7d8dd45
+  $tcPointer1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$tcPointer2) -}
+94ce0336355779f10b80c407d411d346
+  $tcPointer2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pointer"#) -}
+8610f7dc18ab081a347755653e2f65e9
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day6.$trModule3 Day6.$trModule1) -}
+de2faf9c63849a443373f59855cf9685
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$trModule2) -}
+8ea25c385d7bb0fb2862d89bca4e779e
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day6"#) -}
+8a75b2c619b2d0dd66c8fc1003beb03d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day6.$trModule4) -}
+ef7b6ed8d243436e102a20bf29492aa3
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh"#) -}
+f3e46bb053a6ea798d905847b814df97
+  $w$c== ::
+    Data.IntMap.Internal.IntMap GHC.Types.Int
+    -> GHC.Types.Int
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Int
+    -> Data.IntMap.Internal.IntMap GHC.Types.Int
+    -> GHC.Types.Int
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Int
+    -> GHC.Types.Bool
+  {- Arity: 10, HasNoCafRefs,
+     Strictness: <S,1*U><L,1*U(U)><L,1*U><L,1*U><L,1*U(U)><S,1*U><L,1*U(U)><L,1*U><L,1*U><L,1*U(U)>,
+     Inline: [2],
+     Unfolding: (\ (ww :: Data.IntMap.Internal.IntMap GHC.Types.Int)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: [GHC.Types.Int])
+                   (ww3 :: [GHC.Types.Int])
+                   (ww4 :: GHC.Types.Int)
+                   (ww5 :: Data.IntMap.Internal.IntMap GHC.Types.Int)
+                   (ww6 :: GHC.Types.Int)
+                   (ww7 :: [GHC.Types.Int])
+                   (ww8 :: [GHC.Types.Int])
+                   (ww9 :: GHC.Types.Int) ->
+                 case Data.IntMap.Internal.equal
+                        @ GHC.Types.Int
+                        GHC.Classes.$fEqInt
+                        ww
+                        ww5 of wild {
+                   GHC.Types.False -> GHC.Types.False
+                   GHC.Types.True
+                   -> case ww1 of wild1 { GHC.Types.I# x ->
+                      case ww6 of wild2 { GHC.Types.I# y ->
+                      case GHC.Prim.==# x y of lwild {
+                        DEFAULT -> GHC.Types.False
+                        1#
+                        -> case GHC.Classes.$fEq[]_$s$c== ww2 ww7 of wild3 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Classes.$fEq[]_$s$c== ww3 ww8 of wild4 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True -> GHC.Classes.eqInt ww4 ww9 } } } } } }) -}
+b468b4d42a4989c9e5eed3b8e6a261b6
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Data.IntMap.Internal.IntMap GHC.Types.Int
+    -> GHC.Types.Int
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Int
+    -> GHC.Show.ShowS
+  {- Arity: 6, Strictness: <S,U><L,1*U><L,U(U)><L,U><L,U><L,U(U)>,
+     Inline: [2] -}
+928752f1cbcebcc0d25245d295be2096
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int# -> Day6.Param -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><S,1*U><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Day6.Param)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Day6.Ptr b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             Day6.$fShowParam3
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Day6.$fShowParam3
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) }
+                   Day6.Val b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             Day6.$fShowParam2
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Day6.$fShowParam2
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } }) -}
+08f7975031ea50c352a14ee83f666d40
+  $w$cshowsPrec2 ::
+    GHC.Prim.Int# -> Day6.Pointer -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><L,1*U(U)><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Day6.Pointer)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Day6.$fShowPointer4
+                        (GHC.CString.unpackAppendCString#
+                           Day6.$fShowPointer3
+                           (case w `cast` (Day6.N:Pointer[0]) of ww2 { GHC.Types.I# ww3 ->
+                            case GHC.Show.$wshowSignedInt
+                                   0#
+                                   ww3
+                                   (GHC.CString.unpackAppendCString#
+                                      Day6.$fShowPointer2
+                                      w1) of ww4 { (#,#) ww5 ww6 ->
+                            GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Day6.$fShowPointer4
+                           (GHC.CString.unpackAppendCString#
+                              Day6.$fShowPointer3
+                              (case w `cast` (Day6.N:Pointer[0]) of ww2 { GHC.Types.I# ww3 ->
+                               case GHC.Show.$wshowSignedInt
+                                      0#
+                                      ww3
+                                      (GHC.CString.unpackAppendCString#
+                                         Day6.$fShowPointer2
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.$fShow(,)2
+                                            w1)) of ww4 { (#,#) ww5 ww6 ->
+                               GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))) }) -}
+fe96d06afb57f51f993ca95443fc6821
+  $wstep ::
+    Data.IntMap.Internal.IntMap GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Int
+    -> (# (), Day6.CPU #)
+  {- Arity: 5, Strictness: <S,U><S,U><L,U><L,U><L,U(U)>,
+     Inline: [2] -}
+e198aa1a1815be51e443eeb9ea4a35cb
+  $wtoDigits :: GHC.Prim.Int# -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Show.$wshowSignedInt
+                        0#
+                        ww
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Base.map
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   Day6.toDigits1
+                   (GHC.Types.: @ GHC.Types.Char ww5 ww6) }) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  data CPU
+    = CPU {mem :: Data.IntMap.Internal.IntMap GHC.Types.Int,
+           ip :: GHC.Types.Int,
+           inputs :: [GHC.Types.Int],
+           outputs :: [GHC.Types.Int],
+           rb :: GHC.Types.Int}
+fa623f8b892ed6f5f5b19f343f1c21f5
+  type CPUState =
+    Control.Monad.Trans.State.Lazy.State Day6.CPU :: * -> *
+8315c2f0f702e320af1e757b3b328a85
+  data Op
+    = ADD Day6.Param Day6.Param Day6.Param
+    | MUL Day6.Param Day6.Param Day6.Param
+    | INPUT Day6.Param
+    | OUTPUT Day6.Param
+    | JNZ Day6.Param Day6.Param
+    | JZ Day6.Param Day6.Param
+    | CMPLT Day6.Param Day6.Param Day6.Param
+    | CMPEQ Day6.Param Day6.Param Day6.Param
+    | RB Day6.Param
+    | HALT
+928752f1cbcebcc0d25245d295be2096
+  data Param = Ptr GHC.Types.Int | Val GHC.Types.Int
+08f7975031ea50c352a14ee83f666d40
+  newtype Pointer = Pointer {getPtr :: GHC.Types.Int}
+38f5fd88894eef60ac7a3682561e252e
+  day06a :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char]) ->
+                 case Day6.$wstep
+                        (Data.IntMap.Internal.fromList1
+                           @ GHC.Types.Int
+                           (Day6.day06a_go
+                              0#
+                              (GHC.Base.map
+                                 @ (Data.List.Split.Internals.Chunk GHC.Types.Char)
+                                 @ GHC.Types.Int
+                                 Day6.day06a5
+                                 (Data.List.Split.Internals.$wpostProcess
+                                    @ GHC.Types.Char
+                                    Data.List.Split.Internals.Drop
+                                    Data.List.Split.Internals.KeepBlankFields
+                                    Data.List.Split.Internals.KeepBlank
+                                    Data.List.Split.Internals.KeepBlank
+                                    (Data.List.Split.Internals.splitInternal
+                                       @ GHC.Types.Char
+                                       Day6.day06a_s
+                                         `cast`
+                                       (Sym (Data.List.Split.Internals.N:Delimiter[0]
+                                                 <GHC.Types.Char>_R))
+                                       x))))
+                           (Data.IntMap.Internal.Nil @ GHC.Types.Int))
+                        0#
+                        Day6.day06a1
+                        (GHC.Types.[] @ GHC.Types.Int)
+                        Day6.$fShowCPU2 of ww { (#,#) ww1 ww2 ->
+                 case ww2 of wild { Day6.CPU ds ds1 ds2 ds3 ds4 ->
+                 GHC.Show.showList__
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt1
+                   ds3
+                   (GHC.Types.[] @ GHC.Types.Char) } }) -}
+67a135bb95f943d2914e211b4fd59c08
+  day06a1 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Day6.day06a2
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+d431d99256ef9aa56152134b5a5a5a1a
+  day06a2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+c9b8f66c00ca19bc4beca976fb51dd0f
+  day06a3 ::
+    GHC.Types.Char
+    -> [GHC.Types.Char -> GHC.Types.Bool]
+    -> [GHC.Types.Char -> GHC.Types.Bool]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U)><L,U>m2,
+     Unfolding: (\ (x :: GHC.Types.Char)
+                   (ys :: [GHC.Types.Char -> GHC.Types.Bool])[OneShot] ->
+                 GHC.Types.:
+                   @ (GHC.Types.Char -> GHC.Types.Bool)
+                   (GHC.Classes.eqChar x)
+                   ys) -}
+5b6b4e6fd9fd0b30fe448272378edc0c
+  day06a4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (","#) -}
+0cd8fdf0eed3092a8b2b6f7a64331089
+  day06a5 ::
+    Data.List.Split.Internals.Chunk GHC.Types.Char -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Data.List.Split.Internals.Chunk
+                           GHC.Types.Char) ->
+                 case Text.Read.readEither8
+                        @ GHC.Types.Int
+                        (Text.ParserCombinators.ReadP.run
+                           @ GHC.Types.Int
+                           Day6.day06a8
+                           (case x of wild {
+                              Data.List.Split.Internals.Delim as -> as
+                              Data.List.Split.Internals.Text as -> as })) of wild {
+                   [] -> Day6.day06a7
+                   : x1 ds
+                   -> case ds of wild1 { [] -> x1 : ipv ipv1 -> Day6.day06a6 } }) -}
+3374d0e7fb0a3988a52a641a9f53c802
+  day06a6 :: GHC.Types.Int
+  {- Strictness: x -}
+6cf7ba49b358f99128c429e413004a11
+  day06a7 :: GHC.Types.Int
+  {- Strictness: x -}
+ca593d9d5e4b90907e852f0f3e167e3a
+  day06a8 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: (GHC.Read.$fReadInt_$sreadNumber
+                   GHC.Read.$fReadInt2
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Types.Int
+                   (Text.Read.readEither7 @ GHC.Types.Int)) -}
+f6563e4941632bb365dd12e1abcb38fb
+  day06a_go ::
+    GHC.Prim.Int#
+    -> [GHC.Types.Int] -> [(GHC.Types.Int, GHC.Types.Int)]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U> -}
+607361734d9b0877225dbafc9bedde5e
+  day06a_s :: [GHC.Types.Char -> GHC.Types.Bool]
+  {- Unfolding: (GHC.CString.unpackFoldrCString#
+                   @ [GHC.Types.Char -> GHC.Types.Bool]
+                   Day6.day06a4
+                   Day6.day06a3
+                   (GHC.Types.[] @ (GHC.Types.Char -> GHC.Types.Bool))) -}
+50bdbae46c20a652744d7138dfb5b2c9
+  day06b :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char]) ->
+                 case Day6.$wstep
+                        (Data.IntMap.Internal.fromList1
+                           @ GHC.Types.Int
+                           (Day6.day06a_go
+                              0#
+                              (GHC.Base.map
+                                 @ (Data.List.Split.Internals.Chunk GHC.Types.Char)
+                                 @ GHC.Types.Int
+                                 Day6.day06a5
+                                 (Data.List.Split.Internals.$wpostProcess
+                                    @ GHC.Types.Char
+                                    Data.List.Split.Internals.Drop
+                                    Data.List.Split.Internals.KeepBlankFields
+                                    Data.List.Split.Internals.KeepBlank
+                                    Data.List.Split.Internals.KeepBlank
+                                    (Data.List.Split.Internals.splitInternal
+                                       @ GHC.Types.Char
+                                       Day6.day06a_s
+                                         `cast`
+                                       (Sym (Data.List.Split.Internals.N:Delimiter[0]
+                                                 <GHC.Types.Char>_R))
+                                       x))))
+                           (Data.IntMap.Internal.Nil @ GHC.Types.Int))
+                        0#
+                        Day6.day06b1
+                        (GHC.Types.[] @ GHC.Types.Int)
+                        Day6.$fShowCPU2 of ww { (#,#) ww1 ww2 ->
+                 case ww2 of wild { Day6.CPU ds ds1 ds2 ds3 ds4 ->
+                 GHC.Show.showList__
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt1
+                   ds3
+                   (GHC.Types.[] @ GHC.Types.Char) } }) -}
+149d6d33616c9ef57c13b03ccdd79bb9
+  day06b1 :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Day6.day06b2
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+8bca7867ba3bbf6b8c76ae21df76b1f6
+  day06b2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+08f7975031ea50c352a14ee83f666d40
+  getPtr :: Day6.Pointer -> GHC.Types.Int
+  RecSel Left Day6.Pointer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Day6.getPtr1 `cast` (<Day6.Pointer>_R ->_R Day6.N:Pointer[0]) -}
+08f7975031ea50c352a14ee83f666d40
+  getPtr1 :: Day6.Pointer -> Day6.Pointer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Day6.Pointer) -> ds) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  inputs :: Day6.CPU -> [GHC.Types.Int]
+  RecSel Left Day6.CPU
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSLL),1*U(A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day6.CPU) ->
+                 case ds of wild { Day6.CPU ds1 ds2 ds3 ds4 ds5 -> ds3 }) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  ip :: Day6.CPU -> GHC.Types.Int
+  RecSel Left Day6.CPU
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLL),1*U(A,1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day6.CPU) ->
+                 case ds of wild { Day6.CPU ds1 ds2 ds3 ds4 ds5 -> ds2 }) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  mem :: Day6.CPU -> Data.IntMap.Internal.IntMap GHC.Types.Int
+  RecSel Left Day6.CPU
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLLLL),1*U(1*U,A,A,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day6.CPU) ->
+                 case ds of wild { Day6.CPU ds1 ds2 ds3 ds4 ds5 -> ds1 }) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  outputs :: Day6.CPU -> [GHC.Types.Int]
+  RecSel Left Day6.CPU
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLSL),1*U(A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day6.CPU) ->
+                 case ds of wild { Day6.CPU ds1 ds2 ds3 ds4 ds5 -> ds4 }) -}
+f96dd3fc9825ba6263fdc160acb9442f
+  rb :: Day6.CPU -> GHC.Types.Int
+  RecSel Left Day6.CPU
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLS),1*U(A,A,A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day6.CPU) ->
+                 case ds of wild { Day6.CPU ds1 ds2 ds3 ds4 ds5 -> ds5 }) -}
+6b04d8ac15893068a8b1ba344e6bd883
+  toDigits :: GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Day6.$wtoDigits ww1 }) -}
+1f604b9fd293934133859d6b54c6873f
+  toDigits1 :: GHC.Types.Char -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (x :: GHC.Types.Char) ->
+                 case Text.Read.readEither8
+                        @ GHC.Types.Int
+                        (Text.ParserCombinators.ReadP.run
+                           @ GHC.Types.Int
+                           Day6.day06a8
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              x
+                              (GHC.Types.[] @ GHC.Types.Char))) of wild {
+                   [] -> Day6.day06a7
+                   : x1 ds
+                   -> case ds of wild1 { [] -> x1 : ipv ipv1 -> Day6.day06a6 } }) -}
+instance GHC.Classes.Eq [Day6.CPU] = Day6.$fEqCPU
+instance GHC.Classes.Eq [Day6.Op] = Day6.$fEqOp
+instance GHC.Classes.Eq [Day6.Param] = Day6.$fEqParam
+instance GHC.Classes.Eq [Day6.Pointer] = Day6.$fEqPointer
+instance GHC.Show.Show [Day6.CPU] = Day6.$fShowCPU
+instance GHC.Show.Show [Day6.Op] = Day6.$fShowOp
+instance GHC.Show.Show [Day6.Param] = Day6.$fShowParam
+instance GHC.Show.Show [Day6.Pointer] = Day6.$fShowPointer
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

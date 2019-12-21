@@ -1,0 +1,141 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-12 21:48:47.856682 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:Util 8065
+  interface hash: ad4a3a4e42bb60ced576543c276b59e6
+  ABI hash: 96105c4f84a47f5dc1764cefddba1b87
+  export-list hash: e11f1d5bcc0b5734456e83f3a6f97567
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Util.linesStrip
+  Util.manhaDist
+  Util.mostFreq
+  Util.strip
+  Data.List.Split.Internals.splitOn
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0* binary-0.8.6.0
+                      bytestring-0.10.8.2 containers-0.6.0.1 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 integer-gmp-1.0.2.0 split-0.2.3.3 text-1.2.3.1*
+orphans: text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         text-1.2.3.1:Data.Text
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
+import  -/  base-4.12.0.0:Data.Ord eb6a919ff4d21dd5539404727e811591
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  split-0.2.3.3:Data.List.Split 3518b4851dc357bd81ca9eb7a13694f0
+import  -/  split-0.2.3.3:Data.List.Split.Internals b4ab8dde94aedb7514b1f8d89c369cbe
+import  -/  text-1.2.3.1:Data.Text 681b9c3df5b4e4b4e23ef5f840f0b692
+import  -/  text-1.2.3.1:Data.Text.Show b788b7edd0f190b1a7c4f4aba0e35f18
+b85c482604bace5a3dd9e9648feba58d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Util.$trModule3 Util.$trModule1) -}
+fe6b7351de54b1c6bb2c2f4f88639a04
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Util.$trModule2) -}
+8cf9c7ef20f47c48d8bbb973c6105f20
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Util"#) -}
+aaae816b7471d4e224a84a463b35ed7c
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Util.$trModule4) -}
+4b6ac8a30dcfe4ff7dd9c08af0adc2d3
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh"#) -}
+a9c415113c4a5a3e8338b204f6b22691
+  linesStrip :: GHC.Base.String -> [GHC.Base.String]
+  {- Arity: 1, Strictness: <S,1*U> -}
+d47a751ac6f83612385326b68ecd42eb
+  manhaDist ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)S(S)),1*U(1*U(U),1*U(U))><S(S(S)S(S)),1*U(1*U(U),1*U(U))>m,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: (GHC.Types.Int, GHC.Types.Int))
+                   (w1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case w of ww { (,) ww1 ww2 ->
+                 case ww1 of ww3 { GHC.Types.I# ww4 ->
+                 case ww2 of ww5 { GHC.Types.I# ww6 ->
+                 case w1 of ww7 { (,) ww8 ww9 ->
+                 case ww8 of ww10 { GHC.Types.I# ww11 ->
+                 case ww9 of ww12 { GHC.Types.I# ww13 ->
+                 let {
+                   x :: GHC.Prim.Int# = GHC.Prim.-# ww4 ww11
+                 } in
+                 case GHC.Prim.>=# x 0# of lwild {
+                   DEFAULT
+                   -> let {
+                        x1 :: GHC.Prim.Int# = GHC.Prim.-# ww6 ww13
+                      } in
+                      case GHC.Prim.>=# x1 0# of lwild1 {
+                        DEFAULT
+                        -> GHC.Types.I#
+                             (GHC.Prim.+# (GHC.Prim.negateInt# x) (GHC.Prim.negateInt# x1))
+                        1# -> GHC.Types.I# (GHC.Prim.+# (GHC.Prim.negateInt# x) x1) }
+                   1#
+                   -> let {
+                        x1 :: GHC.Prim.Int# = GHC.Prim.-# ww6 ww13
+                      } in
+                      case GHC.Prim.>=# x1 0# of lwild1 {
+                        DEFAULT -> GHC.Types.I# (GHC.Prim.+# x (GHC.Prim.negateInt# x1))
+                        1# -> GHC.Types.I# (GHC.Prim.+# x x1) } } } } } } } }) -}
+bb41f081d520f3aaedc0a04bf23d1ba7
+  mostFreq :: GHC.Classes.Ord a => [a] -> [a]
+  {- Arity: 2,
+     Strictness: <L,U(1*U(1*C(C(U)),A),1*C(C1(U)),A,A,A,A,A,A)><S,1*U>,
+     Unfolding: (\ @ a ($dOrd :: GHC.Classes.Ord a) (eta :: [a]) ->
+                 case Data.OldList.groupBy
+                        @ a
+                        (GHC.Classes.== @ a (GHC.Classes.$p1Ord @ a $dOrd))
+                        (Data.OldList.sortBy
+                           @ a
+                           (GHC.Classes.compare @ a $dOrd)
+                           eta) of wild {
+                   [] -> GHC.List.foldl2 @ [a] : x xs -> Util.mostFreq1 @ a xs x }) -}
+2f9f9809d74600b375aed43e91c98b5c
+  mostFreq1 :: [[a]] -> [a] -> [a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U> -}
+d34e8880195a5b420ec58acb18fb2201
+  strip :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

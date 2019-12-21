@@ -1,0 +1,611 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-12 21:48:48.399422 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:Day3 8065
+  interface hash: 8eb9da7ed1940599f77191fef446208a
+  ABI hash: 83353f7e2cd6786d3e13d938bc79679b
+  export-list hash: b01e5ff792e6317040b7f8d1d78eb168
+  orphan hash: 0406279d2eb88736ad3267dbaff98938
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day3.day03a
+  Day3.day03b
+module dependencies: Util
+package dependencies: array-0.5.3.0 base-4.12.0.0* binary-0.8.6.0
+                      bytestring-0.10.8.2 containers-0.6.0.1 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 integer-gmp-1.0.2.0 split-0.2.3.3 text-1.2.3.1
+orphans: text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         text-1.2.3.1:Data.Text
+import  -/  Util 96105c4f84a47f5dc1764cefddba1b87
+  exports: e11f1d5bcc0b5734456e83f3a6f97567
+  manhaDist d47a751ac6f83612385326b68ecd42eb
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
+import  -/  base-4.12.0.0:Data.Tuple c719fc29608fe81c10bee9a1bf1e05ff
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  containers-0.6.0.1:Data.Map 9f8de07f1b4905617d1dd889549a129c
+import  -/  containers-0.6.0.1:Data.Map.Internal 9e74e122af4fa0c1b8d4c844eeda9c98
+import  -/  split-0.2.3.3:Data.List.Split 3518b4851dc357bd81ca9eb7a13694f0
+import  -/  split-0.2.3.3:Data.List.Split.Internals b4ab8dde94aedb7514b1f8d89c369cbe
+5b86b4367fd4308c1800d7ec5bb70ce9
+  $s$fEq(,) :: GHC.Classes.Eq (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  (GHC.Classes.$fEq(,)_$c==
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fEqInt
+                     GHC.Classes.$fEqInt)
+                  Day3.$s$fEq(,)_$s$fEq(,)_$c/= -}
+46019cd08c9b1f968cbcb4a387816d7c
+  $s$fEq(,)_$s$fEq(,)_$c/= ::
+    (GHC.Types.Int, GHC.Types.Int)
+    -> (GHC.Types.Int, GHC.Types.Int) -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(S)L),1*U(1*U(U),1*U(U))><S(S(S)L),1*U(1*U(U),1*U(U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: (GHC.Types.Int, GHC.Types.Int))
+                   (y :: (GHC.Types.Int, GHC.Types.Int)) ->
+                 case x of wild { (,) a1 a2 ->
+                 case y of wild1 { (,) b1 b2 ->
+                 case GHC.Classes.eqInt a1 b1 of wild2 {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True
+                   -> case GHC.Classes.eqInt a2 b2 of wild3 {
+                        GHC.Types.False -> GHC.Types.True
+                        GHC.Types.True -> GHC.Types.False } } } }) -}
+98dd631da1678f7d1603c682052a659b
+  $s$fOrd(,) :: GHC.Classes.Ord (GHC.Types.Int, GHC.Types.Int)
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ (GHC.Types.Int, GHC.Types.Int)
+                  Day3.$s$fEq(,)
+                  (GHC.Classes.$fOrd(,)_$ccompare
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$c<=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (\ (a1 :: (GHC.Types.Int, GHC.Types.Int))
+                     (b1 :: (GHC.Types.Int, GHC.Types.Int)) ->
+                   GHC.Classes.$fOrd(,)_$c<
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt
+                     b1
+                     a1)
+                  (GHC.Classes.$fOrd(,)_$c>=
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmax
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt)
+                  (GHC.Classes.$fOrd(,)_$cmin
+                     @ GHC.Types.Int
+                     @ GHC.Types.Int
+                     GHC.Classes.$fOrdInt
+                     GHC.Classes.$fOrdInt) -}
+70d3a299e1ac82790e0ca3fa1d67bd43
+  $sdelete_go13 ::
+    GHC.Classes.Ord k1 =>
+    k1 -> Data.Map.Internal.Map k1 a1 -> Data.Map.Internal.Map k1 a1
+  {- Arity: 3,
+     Strictness: <L,U(A,C(C1(U)),A,A,A,A,A,A)><S,1*U><S,1*U> -}
+a3be0d7e188cc85047b50094fcc3793b
+  $sfromList ::
+    [(Day3.Coordinate, a)] -> Data.Map.Internal.Map Day3.Coordinate a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(Day3.Coordinate, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Internal.Tip @ Day3.Coordinate @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case kx of dt { (,) ipv ipv1 ->
+                           Data.Map.Internal.Bin
+                             @ Day3.Coordinate
+                             @ a
+                             1#
+                             dt
+                             x
+                             (Data.Map.Internal.Tip @ Day3.Coordinate @ a)
+                             (Data.Map.Internal.Tip @ Day3.Coordinate @ a) }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case kx of ww9 { (,) ww10 ww11 ->
+                           case ky of ww12 { (,) ww13 ww14 ->
+                           case ww10 of wild4 { GHC.Types.I# x# ->
+                           case ww13 of wild5 { GHC.Types.I# y# ->
+                           case GHC.Prim.<# x# y# of lwild {
+                             DEFAULT
+                             -> case GHC.Prim.==# x# y# of lwild1 {
+                                  DEFAULT
+                                  -> Day3.$sfromList1
+                                       @ a
+                                       wild2
+                                       (Data.Map.Internal.Bin
+                                          @ Day3.Coordinate
+                                          @ a
+                                          1#
+                                          ww9
+                                          x
+                                          (Data.Map.Internal.Tip @ Day3.Coordinate @ a)
+                                          (Data.Map.Internal.Tip @ Day3.Coordinate @ a))
+                                  1#
+                                  -> case ww11 of wild6 { GHC.Types.I# x1 ->
+                                     case ww14 of wild7 { GHC.Types.I# y ->
+                                     case GHC.Prim.<# x1 y of lwild2 {
+                                       DEFAULT
+                                       -> Day3.$sfromList1
+                                            @ a
+                                            wild2
+                                            (Data.Map.Internal.Bin
+                                               @ Day3.Coordinate
+                                               @ a
+                                               1#
+                                               ww9
+                                               x
+                                               (Data.Map.Internal.Tip @ Day3.Coordinate @ a)
+                                               (Data.Map.Internal.Tip @ Day3.Coordinate @ a))
+                                       1#
+                                       -> Day3.$wpoly_go13
+                                            @ a
+                                            1#
+                                            (Data.Map.Internal.Bin
+                                               @ Day3.Coordinate
+                                               @ a
+                                               1#
+                                               ww9
+                                               x
+                                               (Data.Map.Internal.Tip @ Day3.Coordinate @ a)
+                                               (Data.Map.Internal.Tip @ Day3.Coordinate @ a))
+                                            wild2 } } } }
+                             1#
+                             -> Day3.$wpoly_go13
+                                  @ a
+                                  1#
+                                  (Data.Map.Internal.Bin
+                                     @ Day3.Coordinate
+                                     @ a
+                                     1#
+                                     ww9
+                                     x
+                                     (Data.Map.Internal.Tip @ Day3.Coordinate @ a)
+                                     (Data.Map.Internal.Tip @ Day3.Coordinate @ a))
+                                  wild2 } } } } } } } } }) -}
+691250ea35db56d13bd947db56d7d00b
+  $sfromList1 ::
+    [(Day3.Coordinate, a)]
+    -> Data.Map.Internal.Map Day3.Coordinate a
+    -> Data.Map.Internal.Map Day3.Coordinate a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+9611291fabc93eabb9ba50c16d42f3d4
+  $sintersection ::
+    Data.Map.Internal.Map Day3.Coordinate a
+    -> Data.Map.Internal.Map Day3.Coordinate b
+    -> Data.Map.Internal.Map Day3.Coordinate a
+  {- Arity: 2, Strictness: <S,1*U><L,1*U>, Inline: [~] -}
+3d3d7e505eb4f4ec7b169e6e3b1e5335
+  $sunionWith ::
+    (a -> a -> a)
+    -> Data.Map.Internal.Map Day3.Coordinate a
+    -> Data.Map.Internal.Map Day3.Coordinate a
+    -> Data.Map.Internal.Map Day3.Coordinate a
+  {- Arity: 3, Strictness: <L,C(C1(U))><S,1*U><S,1*U>, Inline: [~] -}
+b561207b150c269f76eb5e484142f3fc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day3.$trModule3 Day3.$trModule1) -}
+1ebc7132101ae11f5d16eb89eb6a2b7f
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day3.$trModule2) -}
+998432192c86f71f70b67b90883ca9a6
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day3"#) -}
+8dedfd03540fee7b7bf681cd86c5c8c4
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day3.$trModule4) -}
+71f2da766acf365df1f5abc2e1b690ca
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh"#) -}
+b004a3fb247e3cf04d35e5e7f96381da
+  $w$sgo1 ::
+    Day3.Coordinate
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> a1
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+  {- Arity: 5, Strictness: <L,U><L,1*U(U)><L,U(U)><L,U><S,1*U>,
+     Inline: [2] -}
+226f8731acf9bd4360b768b87bc68a47
+  $w$sgo13 ::
+    GHC.Types.Int
+    -> GHC.Types.Int
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+    -> (# Data.Map.Internal.Map Day3.Coordinate a1, GHC.Maybe.Maybe a1,
+          Data.Map.Internal.Map Day3.Coordinate a1 #)
+  {- Arity: 3, Strictness: <L,1*U(U)><L,U(U)><S,1*U>, Inline: [2] -}
+0117f9ec297ec222349c1de2db761b8a
+  $w$sgo2 ::
+    (a1 -> a1 -> a1)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> a1
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+  {- Arity: 5,
+     Strictness: <L,1*C1(C1(U))><L,U(U)><L,U(U)><L,U><S,1*U>,
+     Inline: [2] -}
+0d9428e62869d9d5bb2c5cb6a3effaec
+  $w$sgo3 ::
+    (a1 -> a1 -> a1)
+    -> GHC.Types.Int
+    -> GHC.Types.Int
+    -> a1
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+    -> Data.Map.Internal.Map Day3.Coordinate a1
+  {- Arity: 5,
+     Strictness: <L,1*C1(C1(U))><L,U(U)><L,U(U)><L,U><S,1*U>,
+     Inline: [2] -}
+306111357609a9e2dc1c1b7c63a4dd12
+  $wday03a ::
+    GHC.Base.String -> (# GHC.Types.Char, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case GHC.Base.map
+                        @ [GHC.Types.Char]
+                        @ [[GHC.Types.Char]]
+                        Day3.day03a7
+                        (Data.OldList.lines w) of wild {
+                   []
+                   -> case Day3.day03a6
+                      ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                      of {}
+                   : a ds
+                   -> case ds of wild1 {
+                        []
+                        -> case Day3.day03a6
+                           ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                           of {}
+                        : b ds1
+                        -> case ds1 of wild2 {
+                             []
+                             -> case Day3.day03a_go13
+                                       (GHC.Types.[] @ GHC.Types.Int)
+                                       (Day3.$sdelete_go13
+                                          @ Day3.Coordinate
+                                          @ GHC.Types.Int
+                                          Day3.$s$fOrd(,)
+                                          Day3.origin
+                                          (Day3.$sintersection
+                                             @ GHC.Types.Int
+                                             @ GHC.Types.Int
+                                             (Day3.makeWire a)
+                                             (Day3.makeWire b))) of wild3 {
+                                  []
+                                  -> case GHC.List.minimum2
+                                     ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                                     of {}
+                                  : ipv ipv1
+                                  -> case ipv of ww { GHC.Types.I# ww1 ->
+                                     case GHC.List.$wgo1 ipv1 ww1 of ww2 { DEFAULT ->
+                                     GHC.Show.$wshowSignedInt
+                                       0#
+                                       ww2
+                                       (GHC.Types.[] @ GHC.Types.Char) } } }
+                             : ipv ipv1
+                             -> case Day3.day03a6
+                                ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                                of {} } } }) -}
+4e2111e9a31499ee7298efee3efb7f92
+  $wday03b ::
+    GHC.Base.String -> (# GHC.Types.Char, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case GHC.Base.map
+                        @ [GHC.Types.Char]
+                        @ [[GHC.Types.Char]]
+                        Day3.day03a7
+                        (Data.OldList.lines w) of wild {
+                   []
+                   -> case Day3.day03b1
+                      ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                      of {}
+                   : a ds
+                   -> case ds of wild1 {
+                        []
+                        -> case Day3.day03b1
+                           ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                           of {}
+                        : b ds1
+                        -> case ds1 of wild2 {
+                             []
+                             -> case Day3.day03b_go13
+                                       (GHC.Types.[] @ GHC.Types.Int)
+                                       (Day3.$sunionWith
+                                          @ GHC.Types.Int
+                                          GHC.Num.$fNumInt_$c+
+                                          (Day3.$sdelete_go13
+                                             @ Day3.Coordinate
+                                             @ GHC.Types.Int
+                                             Day3.$s$fOrd(,)
+                                             Day3.origin
+                                             (Day3.$sintersection
+                                                @ GHC.Types.Int
+                                                @ GHC.Types.Int
+                                                (Day3.makeWire a)
+                                                (Day3.makeWire b)))
+                                          (Day3.$sdelete_go13
+                                             @ Day3.Coordinate
+                                             @ GHC.Types.Int
+                                             Day3.$s$fOrd(,)
+                                             Day3.origin
+                                             (Day3.$sintersection
+                                                @ GHC.Types.Int
+                                                @ GHC.Types.Int
+                                                (Day3.makeWire b)
+                                                (Day3.makeWire a)))) of wild3 {
+                                  []
+                                  -> case GHC.List.minimum2
+                                     ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                                     of {}
+                                  : ipv ipv1
+                                  -> case ipv of ww { GHC.Types.I# ww1 ->
+                                     case GHC.List.$wgo1 ipv1 ww1 of ww2 { DEFAULT ->
+                                     GHC.Show.$wshowSignedInt
+                                       0#
+                                       ww2
+                                       (GHC.Types.[] @ GHC.Types.Char) } } }
+                             : ipv ipv1
+                             -> case Day3.day03b1
+                                ret_ty (# GHC.Types.Char, [GHC.Types.Char] #)
+                                of {} } } }) -}
+f9349a2a50f24d1405e943c5d1fb10e0
+  $wmakeWire' ::
+    Day3.Coordinate
+    -> GHC.Types.Int
+    -> [(Day3.Coordinate, GHC.Types.Int)]
+    -> [Day3.Step]
+    -> [(Day3.Coordinate, GHC.Types.Int)]
+  {- Arity: 4, Strictness: <L,1*U(U(U),U(U))><L,U(U)><L,1*U><S,1*U>,
+     Inline: [2] -}
+bd27023069cbcedc61e9f5d79dc111ff
+  $wpoly_go13 ::
+    GHC.Prim.Int#
+    -> Data.Map.Internal.Map Day3.Coordinate a
+    -> [(Day3.Coordinate, a)]
+    -> Data.Map.Internal.Map Day3.Coordinate a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [2] -}
+a91009947b3e72215c4ad8b87fba3619
+  type Coordinate = (GHC.Types.Int, GHC.Types.Int)
+e6d3284d7229e4f44ef6a4af702608c5
+  type Direction = GHC.Types.Char
+729be9d810ce31031d64ee4452b9603d
+  type Step = (Day3.Direction, GHC.Types.Int)
+9c8f54524081d1951451b53ba437d46f
+  day03a :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Day3.$wday03a w of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Types.Char ww1 ww2 }) -}
+6036808b27a9b43af00a40747c15f09a
+  day03a1 :: GHC.Types.Int
+  {- Strictness: x -}
+f92128fa1b80725abbbc838a32896574
+  day03a2 :: GHC.Types.Int
+  {- Strictness: x -}
+87249ae712ca800ba9724ea669798053
+  day03a3 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: (GHC.Read.$fReadInt_$sreadNumber
+                   GHC.Read.$fReadInt2
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Types.Int
+                   (Text.Read.readEither7 @ GHC.Types.Int)) -}
+ff412486a2d09ee18099ae24533b0153
+  day03a4 :: Day3.Step
+  {- Strictness: x -}
+1d2c54ee95a268c2eb0d6afd2bf0d39b
+  day03a5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+1d9641169aeeb2f162f6a65e8e485625
+  day03a6 :: GHC.Types.Int
+  {- Strictness: x -}
+1177957b5e44dfb13cacfc7bdc3f5e31
+  day03a7 :: [GHC.Types.Char] -> [[GHC.Types.Char]]
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (eta :: [GHC.Types.Char]) ->
+                 GHC.Base.map
+                   @ (Data.List.Split.Internals.Chunk GHC.Types.Char)
+                   @ [GHC.Types.Char]
+                   (Data.List.Split.Internals.fromElem @ GHC.Types.Char)
+                   (Data.List.Split.Internals.$wpostProcess
+                      @ GHC.Types.Char
+                      Data.List.Split.Internals.Drop
+                      Data.List.Split.Internals.KeepBlankFields
+                      Data.List.Split.Internals.KeepBlank
+                      Data.List.Split.Internals.KeepBlank
+                      (Data.List.Split.Internals.splitInternal
+                         @ GHC.Types.Char
+                         Day3.day03a_s
+                           `cast`
+                         (Sym (Data.List.Split.Internals.N:Delimiter[0] <GHC.Types.Char>_R))
+                         eta))) -}
+7b4ec498dea07aa8508d2b9ec4af601d
+  day03a8 ::
+    GHC.Types.Char
+    -> [GHC.Types.Char -> GHC.Types.Bool]
+    -> [GHC.Types.Char -> GHC.Types.Bool]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U)><L,U>m2,
+     Unfolding: (\ (x :: GHC.Types.Char)
+                   (ys :: [GHC.Types.Char -> GHC.Types.Bool])[OneShot] ->
+                 GHC.Types.:
+                   @ (GHC.Types.Char -> GHC.Types.Bool)
+                   (GHC.Classes.eqChar x)
+                   ys) -}
+363cb4b0634d6b92aef5757113c93372
+  day03a9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (","#) -}
+16f13cc6192d48d8b14781b611b3c1e3
+  day03a_go13 ::
+    [GHC.Types.Int]
+    -> Data.Map.Internal.Map
+         (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int
+    -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U> -}
+40549e5cd250d914c447b06b414f69c3
+  day03a_s :: [GHC.Types.Char -> GHC.Types.Bool]
+  {- Unfolding: (GHC.CString.unpackFoldrCString#
+                   @ [GHC.Types.Char -> GHC.Types.Bool]
+                   Day3.day03a9
+                   Day3.day03a8
+                   (GHC.Types.[] @ (GHC.Types.Char -> GHC.Types.Bool))) -}
+e32a15528215c9ac2dab49ad13f8ae81
+  day03b :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Day3.$wday03b w of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Types.Char ww1 ww2 }) -}
+8b837f8e8ee0a455cbd8e140cc910c92
+  day03b1 :: GHC.Types.Int
+  {- Strictness: x -}
+801b25cd10d04952868117788aed0789
+  day03b_go13 ::
+    [GHC.Types.Int]
+    -> Data.Map.Internal.Map
+         (GHC.Types.Int, GHC.Types.Int) GHC.Types.Int
+    -> [GHC.Types.Int]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><S,1*U> -}
+032503a599a4b4052a49cb9e38c4f161
+  makeWire ::
+    [GHC.Base.String]
+    -> Data.Map.Internal.Map Day3.Coordinate GHC.Types.Int
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (s :: [GHC.Base.String]) ->
+                 Day3.$sfromList
+                   @ GHC.Types.Int
+                   (Day3.$wmakeWire'
+                      Day3.origin
+                      Day3.day03a5
+                      (GHC.Types.[] @ (Day3.Coordinate, GHC.Types.Int))
+                      (GHC.Base.map
+                         @ [GHC.Types.Char]
+                         @ (Day3.Direction, GHC.Types.Int)
+                         Day3.parseStep
+                         s))) -}
+7c77005e81c4dfbb5d2443c02445a319
+  origin :: Day3.Coordinate
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Day3.day03a5, Day3.day03a5)) -}
+d17c99459c2a0ff74556a9599a16c6ad
+  parseStep :: GHC.Base.String -> Day3.Step
+  {- Arity: 1, Strictness: <S,1*U>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case w of wild {
+                   [] -> Day3.day03a4
+                   : d l
+                   -> (d,
+                       case Text.Read.readEither8
+                              @ GHC.Types.Int
+                              (Text.ParserCombinators.ReadP.run
+                                 @ GHC.Types.Int
+                                 Day3.day03a3
+                                 l) of wild1 {
+                         [] -> Day3.day03a2
+                         : x ds
+                         -> case ds of wild2 { [] -> x : ipv ipv1 -> Day3.day03a1 } }) }) -}
+"SPEC/Day3 $fEq(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Eq
+                                                         GHC.Types.Int)
+                                                (v :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Day3.$s$fEq(,)
+"SPEC/Day3 $fEq(,)_$c/= @ Int @ Int" [orphan] forall ($dEq1 :: GHC.Classes.Eq
+                                                                 GHC.Types.Int)
+                                                     ($dEq :: GHC.Classes.Eq GHC.Types.Int)
+  GHC.Classes.$fEq(,)_$c/= @ GHC.Types.Int @ GHC.Types.Int $dEq $dEq1
+  = Day3.$s$fEq(,)_$s$fEq(,)_$c/=
+"SPEC/Day3 $fOrd(,) @ Int @ Int" [orphan] forall (v1 :: GHC.Classes.Ord
+                                                          GHC.Types.Int)
+                                                 (v :: GHC.Classes.Ord GHC.Types.Int)
+  GHC.Classes.$fOrd(,) @ GHC.Types.Int @ GHC.Types.Int v v1
+  = Day3.$s$fOrd(,)
+"SPEC/Day3 fromList @ Coordinate _" [orphan] forall @ a
+                                                    ($dOrd :: GHC.Classes.Ord Day3.Coordinate)
+  Data.Map.Internal.fromList @ (GHC.Types.Int, GHC.Types.Int)
+                             @ a
+                             $dOrd
+  = Day3.$sfromList @ a
+"SPEC/Day3 intersection @ Coordinate _ _" [orphan] forall @ a
+                                                          @ b
+                                                          ($dOrd :: GHC.Classes.Ord Day3.Coordinate)
+  Data.Map.Internal.intersection @ (GHC.Types.Int, GHC.Types.Int)
+                                 @ a
+                                 @ b
+                                 $dOrd
+  = Day3.$sintersection @ a @ b
+"SPEC/Day3 unionWith @ Coordinate _" [orphan] forall @ a
+                                                     ($dOrd :: GHC.Classes.Ord Day3.Coordinate)
+  Data.Map.Internal.unionWith @ (GHC.Types.Int, GHC.Types.Int)
+                              @ a
+                              $dOrd
+  = Day3.$sunionWith @ a
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

@@ -1,0 +1,6 @@
+Configuring data-default-instances-containers-0.0.1...
+Preprocessing library for data-default-instances-containers-0.0.1..
+Building library for data-default-instances-containers-0.0.1..
+[1 of 1] Compiling Data.Default.Instances.Containers ( Data/Default/Instances/Containers.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Data/Default/Instances/Containers.o )
+Installing library in /Users/mattias/.stack/snapshots/x86_64-osx/lts-14.16/8.6.5/lib/x86_64-osx-ghc-8.6.5/data-default-instances-containers-0.0.1-9yvw8HF06tiAXuxm5U8KjO
+Registering library for data-default-instances-containers-0.0.1..

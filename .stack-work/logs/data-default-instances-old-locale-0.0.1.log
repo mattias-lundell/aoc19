@@ -1,0 +1,6 @@
+Configuring data-default-instances-old-locale-0.0.1...
+Preprocessing library for data-default-instances-old-locale-0.0.1..
+Building library for data-default-instances-old-locale-0.0.1..
+[1 of 1] Compiling Data.Default.Instances.OldLocale ( Data/Default/Instances/OldLocale.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Data/Default/Instances/OldLocale.o )
+Installing library in /Users/mattias/.stack/snapshots/x86_64-osx/lts-14.16/8.6.5/lib/x86_64-osx-ghc-8.6.5/data-default-instances-old-locale-0.0.1-GRzcBvmea5LLGj3CNDMpIw
+Registering library for data-default-instances-old-locale-0.0.1..

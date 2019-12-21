@@ -1,0 +1,92 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-12 21:48:45.166234 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:Day1 8065
+  interface hash: 6639cf59e3c6e3363522bc42d64b23b3
+  ABI hash: 8c6511b96449089dc296c1515477906b
+  export-list hash: 296f0919093151f712fd29b7a7066d00
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day1.day01a
+  Day1.day01b
+module dependencies:
+package dependencies: base-4.12.0.0* ghc-prim-0.5.3
+                      integer-gmp-1.0.2.0
+orphans: base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity base-4.12.0.0:Data.Monoid
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:GHC.Generics
+                         base-4.12.0.0:GHC.IO.Exception
+import  -/  base-4.12.0.0:Data.Foldable efb37371da929e7bc88d896298d2d979
+import  -/  base-4.12.0.0:Data.OldList e931cf456dc87f11ee6e6fb153bca23e
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Real af2b985dd29515c375fb78b2c9298d42
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+c026a1680421d99c4291968d068bd376
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day1.$trModule3 Day1.$trModule1) -}
+dbef0b74deb5ff7923f5b519e8b4054c
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day1.$trModule2) -}
+7038234f1ef307bb408e9f602eb9750e
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day1"#) -}
+40520b5a3a6df6383cad3fe41e0161c4
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day1.$trModule4) -}
+60acdc00ff0a1ac689f62b24d16bc4ce
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh"#) -}
+534b133db99d9f6d2d13a70a5a6f3030
+  $wday01b ::
+    GHC.Base.String -> (# GHC.Types.Char, [GHC.Types.Char] #)
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [2],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 case Day1.$wgo1 (Data.OldList.lines w) 0# of ww { DEFAULT ->
+                 GHC.Show.$wshowSignedInt
+                   0#
+                   ww
+                   (GHC.Types.[] @ GHC.Types.Char) }) -}
+82a666651704c597b69c4e670b1bd92b
+  $wgo :: [[GHC.Types.Char]] -> GHC.Prim.Int# -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><S,U>m2, Inline: [2] -}
+be09f6231567d54367ed1c6db64f682f
+  $wgo1 :: [GHC.Base.String] -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [2] -}
+75bda77dfcdc4371d8a313cb5baeebb2
+  day01a :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2,
+     Unfolding: (\ (x :: GHC.Base.String) ->
+                 Day1.$wgo (Data.OldList.lines x) 0#) -}
+864c4f780596b6199829294413025ea1
+  day01b :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Day1.$wday01b w of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Types.Char ww1 ww2 }) -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

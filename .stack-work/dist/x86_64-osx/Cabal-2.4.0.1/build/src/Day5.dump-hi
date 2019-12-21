@@ -1,0 +1,1265 @@
+
+==================== FINAL INTERFACE ====================
+2019-12-16 20:25:51.394038 UTC
+
+interface AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh:Day5 8065
+  interface hash: 09c741340af690605372b7dd67f50e3f
+  ABI hash: a95a046501948c9bbfce3eaedc33826a
+  export-list hash: 38ae30336e8a55d5b94a4f8a58f54bd6
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 304d54461d9c82d343c8527b06b0f850
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day5.day05a
+  Day5.day05b
+  Day5.toDigits
+module dependencies:
+package dependencies: array-0.5.3.0 base-4.12.0.0 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 integer-gmp-1.0.2.0 mtl-2.2.2 primitive-0.6.4.0
+                      split-0.2.3.3 transformers-0.5.6.2 vector-0.12.0.3
+orphans: vector-0.12.0.3:Data.Vector.Fusion.Bundle
+         transformers-0.5.6.2:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.Array vector-0.12.0.3:Data.Vector
+import  -/  base-4.12.0.0:Data.Functor 069b2025a03e32fd228e74a86a58a075
+import  -/  base-4.12.0.0:Data.List 17d0c71c557e42abe196f130788fd997
+import  -/  base-4.12.0.0:Data.Maybe 9b76a39e833465c3c5b3c078b431417f
+import  -/  base-4.12.0.0:Data.Tuple c719fc29608fe81c10bee9a1bf1e05ff
+import  -/  base-4.12.0.0:Debug.Trace 60f75ad789dcddb29321db1cb21ccd4c
+import  -/  base-4.12.0.0:GHC.Base c00b75f0b052d05c55ba6a4dd1c63b26
+import  -/  base-4.12.0.0:GHC.Enum 87204abed08db8735fc0be5ab48689aa
+import  -/  base-4.12.0.0:GHC.Err ea5e313ef4146b40b5d8b27aa168e736
+import  -/  base-4.12.0.0:GHC.List 4014a3c8a3b7c31c8325f6bcf1feea4a
+import  -/  base-4.12.0.0:GHC.Num c2039f03637c68f47b0bbff4c18ec616
+import  -/  base-4.12.0.0:GHC.Show 838a5d039379d82d9626aae53dfce276
+import  -/  base-4.12.0.0:Prelude 3c779dfd6448bdd8e234c336802c2acb
+import  -/  base-4.12.0.0:Text.Read 87f80fc2538a174aea915dd98f74fc0a
+import  -/  ghc-prim-0.5.3:GHC.Classes 0f6fd7d7db53fc48f6e1f01803cc6c9d
+import  -/  mtl-2.2.2:Control.Monad.State.Class 243c828469104fb94563be0ea268f418
+import  -/  mtl-2.2.2:Control.Monad.State.Lazy 7d371b0031c45953f2f91cf2f08d9b31
+import  -/  split-0.2.3.3:Data.List.Split 3518b4851dc357bd81ca9eb7a13694f0
+import  -/  split-0.2.3.3:Data.List.Split.Internals b4ab8dde94aedb7514b1f8d89c369cbe
+import  -/  transformers-0.5.6.2:Control.Monad.Trans.State.Lazy 0c22827dedcb94d04bf072c00f8e95c2
+import  -/  vector-0.12.0.3:Data.Vector 22c3ffe47a2f7f315b8c1228ed93f196
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fEqCPU :: GHC.Classes.Eq Day5.CPU
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Day5.CPU Day5.$fEqCPU_$c== Day5.$fEqCPU_$c/= -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fEqCPU_$c/= :: Day5.CPU -> Day5.CPU -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LSL)LLLL),1*U(1*U(U,U,U),U(U),U,U,U(U))><S(S(LSL)LLLL),1*U(1*U(U,U,U),U(U),U,U,U(U))>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Day5.CPU) (y :: Day5.CPU) ->
+                 case Day5.$fEqCPU_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fEqCPU_$c== :: Day5.CPU -> Day5.CPU -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(S(LSL)LLLL),1*U(1*U(U,U,U),U(U),U,U,U(U))><S(S(LSL)LLLL),1*U(1*U(U,U,U),U(U),U,U,U(U))>,
+     Unfolding: (\ (ds :: Day5.CPU) (ds1 :: Day5.CPU) ->
+                 case ds of wild { Day5.CPU a1 a2 a3 a4 a5 ->
+                 case ds1 of wild1 { Day5.CPU b1 b2 b3 b4 b5 ->
+                 case a1 of v2 { Data.Vector.Vector ipv ipv1 ipv2 ->
+                 case b1 of v1 { Data.Vector.Vector ipv3 ipv4 ipv5 ->
+                 let {
+                   exit :: GHC.Prim.Int# -> GHC.Types.Bool
+                     <join 1> {- Arity: 1, Strictness: <S,U> -}
+                   = \ (ww :: GHC.Prim.Int#)[OneShot] ->
+                     case GHC.Prim.>=# ww ipv4 of lwild {
+                       DEFAULT -> GHC.Types.False
+                       1#
+                       -> case a2 of wild2 { GHC.Types.I# x ->
+                          case b2 of wild3 { GHC.Types.I# y ->
+                          case GHC.Prim.==# x y of lwild1 {
+                            DEFAULT -> GHC.Types.False
+                            1#
+                            -> case GHC.Classes.$fEq[]_$s$c== a3 b3 of wild4 {
+                                 GHC.Types.False -> GHC.Types.False
+                                 GHC.Types.True
+                                 -> case GHC.Classes.$fEq[]_$s$c== a4 b4 of wild5 {
+                                      GHC.Types.False -> GHC.Types.False
+                                      GHC.Types.True -> GHC.Classes.eqInt a5 b5 } } } } } }
+                 } in
+                 letrec {
+                   $weq_loop0 :: GHC.Types.SPEC
+                                 -> GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Types.Bool
+                     <join 3> {- Arity: 3, Strictness: <S,1*U><S,U><S,U>, Inline: [2] -}
+                   = \ (w :: GHC.Types.SPEC)
+                       (ww :: GHC.Prim.Int#)
+                       (ww1 :: GHC.Prim.Int#) ->
+                     case w of ds9 { DEFAULT ->
+                     case GHC.Prim.>=# ww ipv1 of lwild {
+                       DEFAULT
+                       -> case GHC.Prim.indexArray#
+                                 @ GHC.Types.Int
+                                 ipv2
+                                 (GHC.Prim.+# ipv ww) of ds2 { Unit# ipv6 ->
+                          case GHC.Prim.>=# ww1 ipv4 of lwild1 {
+                            DEFAULT
+                            -> case GHC.Prim.indexArray#
+                                      @ GHC.Types.Int
+                                      ipv5
+                                      (GHC.Prim.+# ipv3 ww1) of ds3 { Unit# ipv7 ->
+                               case ipv6 of wild2 { GHC.Types.I# x ->
+                               case ipv7 of wild3 { GHC.Types.I# y ->
+                               case GHC.Prim.==# x y of lwild2 {
+                                 DEFAULT -> GHC.Types.False
+                                 1#
+                                 -> $weq_loop0
+                                      GHC.Types.SPEC
+                                      (GHC.Prim.+# ww 1#)
+                                      (GHC.Prim.+# ww1 1#) } } } }
+                            1# -> GHC.Types.False } }
+                       1# -> exit ww1 } }
+                 } in
+                 $weq_loop0 GHC.Types.SPEC 0# 0# } } } }) -}
+42d7e41a37db76709cc1b7d40301802e
+  $fEqOp :: GHC.Classes.Eq Day5.Op
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:. @ Day5.Op Day5.$fEqOp_$c== Day5.$fEqOp_$c/= -}
+42d7e41a37db76709cc1b7d40301802e
+  $fEqOp_$c/= :: Day5.Op -> Day5.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Day5.Op) (y :: Day5.Op) ->
+                 case Day5.$fEqOp_$c== x y of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+42d7e41a37db76709cc1b7d40301802e
+  $fEqOp_$c== :: Day5.Op -> Day5.Op -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+7871806009a5cf699458ed583eb2d84b
+  $fEqParam :: GHC.Classes.Eq Day5.Param
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day5.Param Day5.$fEqParam_$c== Day5.$fEqParam_$c/= -}
+7871806009a5cf699458ed583eb2d84b
+  $fEqParam_$c/= :: Day5.Param -> Day5.Param -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ (x :: Day5.Param) (y :: Day5.Param) ->
+                 case x of wild {
+                   Day5.Ptr a1
+                   -> case y of wild1 {
+                        Day5.Ptr b1
+                        -> case GHC.Classes.eqInt a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False }
+                        Day5.Val ipv -> GHC.Types.True }
+                   Day5.Val a1
+                   -> case y of wild1 {
+                        Day5.Ptr ipv -> GHC.Types.True
+                        Day5.Val b1
+                        -> case GHC.Classes.eqInt a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.True
+                             GHC.Types.True -> GHC.Types.False } } }) -}
+7871806009a5cf699458ed583eb2d84b
+  $fEqParam_$c== :: Day5.Param -> Day5.Param -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Day5.Param) (ds1 :: Day5.Param) ->
+                 case ds of wild {
+                   Day5.Ptr a1
+                   -> case ds1 of wild1 {
+                        Day5.Ptr b1 -> GHC.Classes.eqInt a1 b1
+                        Day5.Val ipv -> GHC.Types.False }
+                   Day5.Val a1
+                   -> case ds1 of wild1 {
+                        Day5.Ptr ipv -> GHC.Types.False
+                        Day5.Val b1 -> GHC.Classes.eqInt a1 b1 } }) -}
+780003e0178d48deb8e8083282f8be3b
+  $fEqPointer :: GHC.Classes.Eq Day5.Pointer
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day5.Pointer
+                  GHC.Classes.eqInt
+                    `cast`
+                  (Sym (Day5.N:Pointer[0])
+                   ->_R Sym (Day5.N:Pointer[0])
+                   ->_R <GHC.Types.Bool>_R)
+                  GHC.Classes.neInt
+                    `cast`
+                  (Sym (Day5.N:Pointer[0])
+                   ->_R Sym (Day5.N:Pointer[0])
+                   ->_R <GHC.Types.Bool>_R) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fShowCPU :: GHC.Show.Show Day5.CPU
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day5.CPU
+                  Day5.$fShowCPU_$cshowsPrec
+                  Day5.$fShowCPU_$cshow
+                  Day5.$fShowCPU_$cshowList -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fShowCPU1 :: Day5.CPU -> GHC.Show.ShowS
+  {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),U(U),U,U,U(U))>,
+     Unfolding: (\ (w :: Day5.CPU) ->
+                 case w of ww { Day5.CPU ww1 ww2 ww3 ww4 ww5 ->
+                 Day5.$w$cshowsPrec 0# ww1 ww2 ww3 ww4 ww5 }) -}
+42e6f715495cd62c9891f793df6628e8
+  $fShowCPU2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fShowCPU_$cshow :: Day5.CPU -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U(1*U(U,U,U),U(U),U,U,U(U))>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day5.CPU) ->
+                 Day5.$fShowCPU_$cshowsPrec
+                   Day5.$fShowCPU2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fShowCPU_$cshowList :: [Day5.CPU] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day5.CPU]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day5.CPU Day5.$fShowCPU1 ls s) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  $fShowCPU_$cshowsPrec ::
+    GHC.Types.Int -> Day5.CPU -> GHC.Show.ShowS
+  {- Arity: 2,
+     Strictness: <S(S),1*U(U)><S,1*U(1*U(U,U,U),U(U),U,U,U(U))>,
+     Inline: [2],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int) (w1 :: Day5.CPU) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Day5.CPU ww3 ww4 ww5 ww6 ww7 ->
+                 Day5.$w$cshowsPrec ww1 ww3 ww4 ww5 ww6 ww7 } }) -}
+42d7e41a37db76709cc1b7d40301802e
+  $fShowOp :: GHC.Show.Show Day5.Op
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day5.Op
+                  Day5.$fShowOp_$cshowsPrec
+                  Day5.$fShowOp_$cshow
+                  Day5.$fShowOp_$cshowList -}
+42d7e41a37db76709cc1b7d40301802e
+  $fShowOp1 :: Day5.Op -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Day5.$fShowOp_$cshowsPrec Day5.$fShowCPU2) -}
+42d7e41a37db76709cc1b7d40301802e
+  $fShowOp_$cshow :: Day5.Op -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day5.Op) ->
+                 Day5.$fShowOp_$cshowsPrec
+                   Day5.$fShowCPU2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+42d7e41a37db76709cc1b7d40301802e
+  $fShowOp_$cshowList :: [Day5.Op] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day5.Op]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day5.Op Day5.$fShowOp1 ls s) -}
+42d7e41a37db76709cc1b7d40301802e
+  $fShowOp_$cshowsPrec :: GHC.Types.Int -> Day5.Op -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U> -}
+7871806009a5cf699458ed583eb2d84b
+  $fShowParam :: GHC.Show.Show Day5.Param
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day5.Param
+                  Day5.$fShowParam_$cshowsPrec
+                  Day5.$fShowParam_$cshow
+                  Day5.$fShowParam_$cshowList -}
+7871806009a5cf699458ed583eb2d84b
+  $fShowParam1 :: Day5.Param -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (w :: Day5.Param) (w1 :: GHC.Base.String) ->
+                 Day5.$w$cshowsPrec1 0# w w1) -}
+db86492324ee575d4b41cea01a2eac4f
+  $fShowParam2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Val "#) -}
+0dfefd82988a22235f8239076502ec9e
+  $fShowParam3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Ptr "#) -}
+7871806009a5cf699458ed583eb2d84b
+  $fShowParam_$cshow :: Day5.Param -> GHC.Base.String
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day5.Param) ->
+                 Day5.$fShowParam_$cshowsPrec
+                   Day5.$fShowCPU2
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+7871806009a5cf699458ed583eb2d84b
+  $fShowParam_$cshowList :: [Day5.Param] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day5.Param]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day5.Param Day5.$fShowParam1 ls s) -}
+7871806009a5cf699458ed583eb2d84b
+  $fShowParam_$cshowsPrec ::
+    GHC.Types.Int -> Day5.Param -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Day5.Param)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Day5.$w$cshowsPrec1 ww1 w1 w2 }) -}
+780003e0178d48deb8e8083282f8be3b
+  $fShowPointer :: GHC.Show.Show Day5.Pointer
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day5.Pointer
+                  Day5.$fShowPointer_$cshowsPrec
+                  Day5.$fShowPointer_$cshow
+                  Day5.$fShowPointer_$cshowList -}
+780003e0178d48deb8e8083282f8be3b
+  $fShowPointer1 :: Day5.Pointer -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U(U)><L,U>,
+     Unfolding: (\ (w :: Day5.Pointer) (w1 :: GHC.Base.String) ->
+                 Day5.$w$cshowsPrec2 0# w w1) -}
+f9180ea99ff8549bd8ee15660ff423ff
+  $fShowPointer2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+c637b72513735a93b6e607ee7b944f4f
+  $fShowPointer3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("getPtr = "#) -}
+0b4b8fa249f96fd2859a81a6c1acf6c6
+  $fShowPointer4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pointer {"#) -}
+c4615396b9d3b36c39e4ee79e87c1103
+  $fShowPointer5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Day5.$fShowPointer2) -}
+780003e0178d48deb8e8083282f8be3b
+  $fShowPointer_$cshow :: Day5.Pointer -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(U)>,
+     Unfolding: (\ (x :: Day5.Pointer) ->
+                 GHC.CString.unpackAppendCString#
+                   Day5.$fShowPointer4
+                   (GHC.CString.unpackAppendCString#
+                      Day5.$fShowPointer3
+                      (case x `cast` (Day5.N:Pointer[0]) of ww2 { GHC.Types.I# ww3 ->
+                       case GHC.Show.$wshowSignedInt
+                              0#
+                              ww3
+                              Day5.$fShowPointer5 of ww4 { (#,#) ww5 ww6 ->
+                       GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))) -}
+780003e0178d48deb8e8083282f8be3b
+  $fShowPointer_$cshowList :: [Day5.Pointer] -> GHC.Show.ShowS
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Day5.Pointer]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Day5.Pointer Day5.$fShowPointer1 ls s) -}
+780003e0178d48deb8e8083282f8be3b
+  $fShowPointer_$cshowsPrec ::
+    GHC.Types.Int -> Day5.Pointer -> GHC.Show.ShowS
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <S(S),1*U(U)><L,1*U(U)><L,U>, Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Day5.Pointer)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Day5.$w$cshowsPrec2 ww1 w1 w2 }) -}
+e18e9f63b052114a76a6ae4c8bd88a70
+  $tc'ADD :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   775576706266479428##
+                   2965965614898134904##
+                   Day5.$trModule
+                   Day5.$tc'ADD2
+                   0#
+                   Day5.$tc'ADD1) -}
+00476e749f0192d47ba064bb0ab4cfb1
+  $tc'ADD1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+07c796905409113f794daa289f096105
+  $tc'ADD2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'ADD3) -}
+0de1213e1f8434065ba1d2cc544e5320
+  $tc'ADD3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ADD"#) -}
+67a49fb3e0044d80451f2aac5a0e8ddc
+  $tc'CMPEQ :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9575543452424710866##
+                   10401803559630643627##
+                   Day5.$trModule
+                   Day5.$tc'CMPEQ1
+                   0#
+                   Day5.$tc'ADD1) -}
+2994a644d0cc32b9522b8ad193d570dc
+  $tc'CMPEQ1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'CMPEQ2) -}
+c433d160613f6d9fff17852ff4b4c84a
+  $tc'CMPEQ2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMPEQ"#) -}
+932a5888d3894e26cfe8759e37c000be
+  $tc'CMPLT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1714074354286194285##
+                   7913109347547191942##
+                   Day5.$trModule
+                   Day5.$tc'CMPLT1
+                   0#
+                   Day5.$tc'ADD1) -}
+21bb89f1cd9289e73324dc2d5b268026
+  $tc'CMPLT1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'CMPLT2) -}
+9cf5c86d985589245f77252f658d8408
+  $tc'CMPLT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CMPLT"#) -}
+55fe26888cbca9a4cadd78e866bcad77
+  $tc'CPU :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10497899011463022867##
+                   16121744818119408508##
+                   Day5.$trModule
+                   Day5.$tc'CPU2
+                   0#
+                   Day5.$tc'CPU1) -}
+d7fd9ae915fb619b98f8cf3baf3e831f
+  $tc'CPU1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+9c1c8c5fd34e86d8f65e6c0ff2087a1b
+  $tc'CPU2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'CPU3) -}
+b51ae89bdbff05678e834b757216d8fd
+  $tc'CPU3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CPU"#) -}
+2af92b1bc49783fb6e0019fba3c39fb2
+  $tc'HALT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7462030616315052539##
+                   2647033116681314103##
+                   Day5.$trModule
+                   Day5.$tc'HALT2
+                   0#
+                   Day5.$tc'HALT1) -}
+73411c01c40dd0491df0bd28300ebfd3
+  $tc'HALT1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+7f629dda51f69c493a0558c988507a8d
+  $tc'HALT2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'HALT3) -}
+82d2962ae6e8a2a98252c616641aa986
+  $tc'HALT3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'HALT"#) -}
+ad4dc01d7dddc77232797ed975277c4a
+  $tc'INPUT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17657840841648174321##
+                   16129776382543550581##
+                   Day5.$trModule
+                   Day5.$tc'INPUT2
+                   0#
+                   Day5.$tc'INPUT1) -}
+0159374dd4b52f80440e98ae72a49b58
+  $tc'INPUT1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+4c2ba7ad5300e6209e16bba96402d2f8
+  $tc'INPUT2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'INPUT3) -}
+acbd2d695d8816916782f696eb63aefa
+  $tc'INPUT3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'INPUT"#) -}
+7d4f999edee961e26872f10da80e03c9
+  $tc'JNZ :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9087388003952682539##
+                   15261144281222213982##
+                   Day5.$trModule
+                   Day5.$tc'JNZ2
+                   0#
+                   Day5.$tc'JNZ1) -}
+245802c49301bb38e95223327ea6a504
+  $tc'JNZ1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7daac8272688f4dd6d8991bda3d38074
+  $tc'JNZ2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'JNZ3) -}
+8ed3cdf0da4574c78f4d409545f4d876
+  $tc'JNZ3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'JNZ"#) -}
+22ff7e4a0506cd1acfd23bea9c4bafb0
+  $tc'JZ :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18296442647055687818##
+                   16853804782811793546##
+                   Day5.$trModule
+                   Day5.$tc'JZ1
+                   0#
+                   Day5.$tc'JNZ1) -}
+55ce8e2ce0a0d50535aff93f495ae8bc
+  $tc'JZ1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'JZ2) -}
+ccf4bb97c0129f88b201bc6bdd72453d
+  $tc'JZ2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'JZ"#) -}
+d2d002764a7783ef7e1da7a9053bf36f
+  $tc'MUL :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13809598402968352905##
+                   5310737544340749477##
+                   Day5.$trModule
+                   Day5.$tc'MUL1
+                   0#
+                   Day5.$tc'ADD1) -}
+cf33cfc66fa34d4b94c29333112b3fc3
+  $tc'MUL1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'MUL2) -}
+3d7a91fb4dc5d11c3f6389f85756af7d
+  $tc'MUL2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'MUL"#) -}
+745c6277586b00e13ea150af09c1d16e
+  $tc'OUTPUT :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16031439548726062769##
+                   5712044274034819014##
+                   Day5.$trModule
+                   Day5.$tc'OUTPUT1
+                   0#
+                   Day5.$tc'INPUT1) -}
+45ec4d5a34a7df523e5ea2b3b5cf04a3
+  $tc'OUTPUT1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'OUTPUT2) -}
+47767a6fb9c9c17e35d79588b3520bae
+  $tc'OUTPUT2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'OUTPUT"#) -}
+678a3dfca56e14e9f88b357c89e40e98
+  $tc'Pointer :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9362434029453842190##
+                   14106927309764899604##
+                   Day5.$trModule
+                   Day5.$tc'Pointer2
+                   0#
+                   Day5.$tc'Pointer1) -}
+6054a84686cd81574bf9669eecbbcaf2
+  $tc'Pointer1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+26e592b116ebce0df7e87f22d7dda30d
+  $tc'Pointer2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'Pointer3) -}
+02f7f3be16a723dbdfdae8a434ca9033
+  $tc'Pointer3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Pointer"#) -}
+7ba27cdaa880b75207f38aa1854a400e
+  $tc'Ptr :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7722237328332870508##
+                   6063139831723387635##
+                   Day5.$trModule
+                   Day5.$tc'Ptr2
+                   0#
+                   Day5.$tc'Ptr1) -}
+401f0ae1169f8e9f5832fa56d64f2c8f
+  $tc'Ptr1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b538704293609590f36d6430218e591c
+  $tc'Ptr2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'Ptr3) -}
+535fb354b26ad59fe603631d387f3ecf
+  $tc'Ptr3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Ptr"#) -}
+dfb3086c1e359f2d9a87b9f96c29c625
+  $tc'Val :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14332382745174087925##
+                   5740111236884797725##
+                   Day5.$trModule
+                   Day5.$tc'Val1
+                   0#
+                   Day5.$tc'Ptr1) -}
+22a3db2ce9936857c6466032bbae45e6
+  $tc'Val1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tc'Val2) -}
+5faecab3a6de1b283357b78e95e34756
+  $tc'Val2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Val"#) -}
+c676b82009636f639c53a257b8584981
+  $tcCPU :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10425514820190418670##
+                   13697329627698696270##
+                   Day5.$trModule
+                   Day5.$tcCPU1
+                   0#
+                   GHC.Types.krep$*) -}
+0734d20eff68de92cb1caf071e3a17d3
+  $tcCPU1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tcCPU2) -}
+f85ba3f8123fc972340f3b0e9744cac0
+  $tcCPU2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("CPU"#) -}
+206700ffffdec2d16c0d06320c1dddbc
+  $tcOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7632382189630048841##
+                   923931471353982361##
+                   Day5.$trModule
+                   Day5.$tcOp1
+                   0#
+                   GHC.Types.krep$*) -}
+fab19f1f5c8022a342edb3cab3242cd2
+  $tcOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tcOp2) -}
+72866fdb4715c8956248a0f1aa777f61
+  $tcOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Op"#) -}
+bcb1d820358bad68027e61c530f39789
+  $tcParam :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5335545652220894520##
+                   9190547974505535861##
+                   Day5.$trModule
+                   Day5.$tcParam1
+                   0#
+                   GHC.Types.krep$*) -}
+6c612a2b2b872aa1cc5405a1393c6cab
+  $tcParam1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tcParam2) -}
+b4a9c34f0e46ea7da0f0e4e2e1b9ceae
+  $tcParam2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Param"#) -}
+94034ffb2df4ecb7a23de23c24a229ed
+  $tcPointer :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4522251286314796220##
+                   17630123167294652519##
+                   Day5.$trModule
+                   Day5.$tcPointer1
+                   0#
+                   GHC.Types.krep$*) -}
+6b903829a6bef71b78120093a51687e7
+  $tcPointer1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$tcPointer2) -}
+af22f7ab76e3326e70319ef0398f8ecb
+  $tcPointer2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pointer"#) -}
+80d2a2210c4250463a636558b1e64e55
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day5.$trModule3 Day5.$trModule1) -}
+c85a7683582091e7a7f75ea48b092e18
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$trModule2) -}
+e9cae9f7e5fd28d658118299b841dac3
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day5"#) -}
+250d9d8e916a96285f31f091a1ba8b85
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day5.$trModule4) -}
+440a96d85d6b9ee3fa7b34291f2cf9b7
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("AoC2019-0.0.0-LHwDqb9BY85HZiqrMRAAJh"#) -}
+3cfe4a41355b0c2895d65427dc08a69b
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Data.Vector.Vector GHC.Types.Int
+    -> GHC.Types.Int
+    -> [GHC.Types.Int]
+    -> [GHC.Types.Int]
+    -> GHC.Types.Int
+    -> GHC.Show.ShowS
+  {- Arity: 6,
+     Strictness: <S,U><L,1*U(U,U,U)><L,U(U)><L,U><L,U><L,U(U)>,
+     Inline: [2] -}
+7871806009a5cf699458ed583eb2d84b
+  $w$cshowsPrec1 ::
+    GHC.Prim.Int# -> Day5.Param -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><S,1*U><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Day5.Param)
+                   (w1 :: GHC.Base.String) ->
+                 case w of wild {
+                   Day5.Ptr b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             Day5.$fShowParam3
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Day5.$fShowParam3
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) }
+                   Day5.Val b1
+                   -> case GHC.Prim.>=# ww 11# of lwild {
+                        DEFAULT
+                        -> GHC.CString.unpackAppendCString#
+                             Day5.$fShowParam2
+                             (case b1 of ww2 { GHC.Types.I# ww3 ->
+                              case GHC.Show.$wshowSignedInt 11# ww3 w1 of ww4 { (#,#) ww5 ww6 ->
+                              GHC.Types.: @ GHC.Types.Char ww5 ww6 } })
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (GHC.CString.unpackAppendCString#
+                                Day5.$fShowParam2
+                                (case b1 of ww2 { GHC.Types.I# ww3 ->
+                                 case GHC.Show.$wshowSignedInt
+                                        11#
+                                        ww3
+                                        (GHC.Types.:
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShow(,)2
+                                           w1) of ww4 { (#,#) ww5 ww6 ->
+                                 GHC.Types.: @ GHC.Types.Char ww5 ww6 } })) } }) -}
+780003e0178d48deb8e8083282f8be3b
+  $w$cshowsPrec2 ::
+    GHC.Prim.Int# -> Day5.Pointer -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, HasNoCafRefs, Strictness: <S,U><L,1*U(U)><L,U>,
+     Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (w :: Day5.Pointer)
+                   (w1 :: GHC.Base.String) ->
+                 case GHC.Prim.>=# ww 11# of lwild {
+                   DEFAULT
+                   -> GHC.CString.unpackAppendCString#
+                        Day5.$fShowPointer4
+                        (GHC.CString.unpackAppendCString#
+                           Day5.$fShowPointer3
+                           (case w `cast` (Day5.N:Pointer[0]) of ww2 { GHC.Types.I# ww3 ->
+                            case GHC.Show.$wshowSignedInt
+                                   0#
+                                   ww3
+                                   (GHC.CString.unpackAppendCString#
+                                      Day5.$fShowPointer2
+                                      w1) of ww4 { (#,#) ww5 ww6 ->
+                            GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))
+                   1#
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.CString.unpackAppendCString#
+                           Day5.$fShowPointer4
+                           (GHC.CString.unpackAppendCString#
+                              Day5.$fShowPointer3
+                              (case w `cast` (Day5.N:Pointer[0]) of ww2 { GHC.Types.I# ww3 ->
+                               case GHC.Show.$wshowSignedInt
+                                      0#
+                                      ww3
+                                      (GHC.CString.unpackAppendCString#
+                                         Day5.$fShowPointer2
+                                         (GHC.Types.:
+                                            @ GHC.Types.Char
+                                            GHC.Show.$fShow(,)2
+                                            w1)) of ww4 { (#,#) ww5 ww6 ->
+                               GHC.Types.: @ GHC.Types.Char ww5 ww6 } }))) }) -}
+e8b6b1ef9c804e5209b6c111e4c0e07a
+  $wfoldlM_loop ::
+    GHC.Types.SPEC
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.MutableArray# GHC.Prim.RealWorld GHC.Types.Int
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Int]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Vector.Vector GHC.Types.Int #)
+  {- Arity: 7, Strictness: <S,1*U><L,U><L,U><S,U><L,U><S,1*U><S,U>,
+     Inline: [2] -}
+93e64a8c12a52f42981863f87c070836
+  $wstep :: Day5.CPU -> (# (), Day5.CPU #)
+  {- Arity: 1, Strictness: <L,U(U(U,U,U),U(U),U,U,U(U))>,
+     Inline: [2] -}
+fc05bcb3f7d76bf54c9598290c7b9d42
+  $wtoDigits :: GHC.Prim.Int# -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (ww :: GHC.Prim.Int#) ->
+                 case GHC.Show.$wshowSignedInt
+                        0#
+                        ww
+                        (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                 GHC.Base.map
+                   @ GHC.Types.Char
+                   @ GHC.Types.Int
+                   Day5.toDigits1
+                   (GHC.Types.: @ GHC.Types.Char ww5 ww6) }) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  data CPU
+    = CPU {mem :: Data.Vector.Vector GHC.Types.Int,
+           ip :: GHC.Types.Int,
+           inputs :: [GHC.Types.Int],
+           outputs :: [GHC.Types.Int],
+           relativeBase :: GHC.Types.Int}
+b11d531d83aa9e190350c3176ba1ca80
+  type CPUState =
+    Control.Monad.Trans.State.Lazy.State Day5.CPU :: * -> *
+42d7e41a37db76709cc1b7d40301802e
+  data Op
+    = ADD Day5.Param Day5.Param Day5.Param
+    | MUL Day5.Param Day5.Param Day5.Param
+    | INPUT Day5.Param
+    | OUTPUT Day5.Param
+    | JZ Day5.Param Day5.Param
+    | JNZ Day5.Param Day5.Param
+    | CMPLT Day5.Param Day5.Param Day5.Param
+    | CMPEQ Day5.Param Day5.Param Day5.Param
+    | HALT
+7871806009a5cf699458ed583eb2d84b
+  data Param = Ptr GHC.Types.Int | Val GHC.Types.Int
+780003e0178d48deb8e8083282f8be3b
+  newtype Pointer = Pointer {getPtr :: GHC.Types.Int}
+e3a073e9e1ef309a609c5fd8974d0c03
+  day05a :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char]) ->
+                 case Day5.$wstep
+                        (Day5.CPU
+                           (case GHC.Magic.runRW#
+                                   @ ('GHC.Types.TupleRep
+                                        '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                   @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        Data.Vector.Vector GHC.Types.Int #)
+                                   (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.newArray#
+                                           @ GHC.Types.Int
+                                           @ (Control.Monad.Primitive.PrimState
+                                                (GHC.ST.ST GHC.Prim.RealWorld))
+                                           0#
+                                           (Data.Vector.Mutable.uninitialised @ GHC.Types.Int)
+                                           s1
+                                             `cast`
+                                           (GHC.Prim.State#
+                                              (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                        (Nth:0
+                                                             (Nth:2
+                                                                  (<GHC.Prim.State#
+                                                                      GHC.Prim.RealWorld>_R
+                                                                   ->_R ((#,#)
+                                                                           <'GHC.Types.TupleRep
+                                                                              '[]>_R
+                                                                           <'GHC.Types.LiftedRep>_R
+                                                                           <GHC.Prim.State#
+                                                                              GHC.Prim.RealWorld>_R
+                                                                           (Data.Vector.Generic.Base.Mutable
+                                                                              <Data.Vector.Vector>_N
+                                                                              (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                   <GHC.Prim.RealWorld>_N)
+                                                                              <GHC.Types.Int>_N)_R)_R))))))_R of ds1 { (#,#) ipv ipv1 ->
+                                    Day5.$wfoldlM_loop
+                                      GHC.Types.SPEC
+                                      0#
+                                      0#
+                                      ipv1
+                                        `cast`
+                                      (GHC.Prim.MutableArray#
+                                         (Nth:0
+                                              (Nth:3
+                                                   (Nth:3
+                                                        (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                         ->_R ((#,#)
+                                                                 <'GHC.Types.TupleRep '[]>_R
+                                                                 <'GHC.Types.LiftedRep>_R
+                                                                 <GHC.Prim.State#
+                                                                    GHC.Prim.RealWorld>_R
+                                                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                                  (GHC.ST.ST
+                                                                                                                     GHC.Prim.RealWorld)>_N <GHC.Types.Int>_N))_R)) ; Sub (Data.Vector.D:R:MutableVector[0]) (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                                                                                                                                                  <GHC.Prim.RealWorld>_N) <GHC.Types.Int>_N))
+                                         (Nth:1
+                                              (Nth:3
+                                                   (Nth:3
+                                                        (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                         ->_R ((#,#)
+                                                                 <'GHC.Types.TupleRep '[]>_R
+                                                                 <'GHC.Types.LiftedRep>_R
+                                                                 <GHC.Prim.State#
+                                                                    GHC.Prim.RealWorld>_R
+                                                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                                  (GHC.ST.ST
+                                                                                                                     GHC.Prim.RealWorld)>_N <GHC.Types.Int>_N))_R)) ; Sub (Data.Vector.D:R:MutableVector[0]) (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                                                                                                                                                  <GHC.Prim.RealWorld>_N) <GHC.Types.Int>_N)))_R
+                                      0#
+                                      (GHC.Base.map
+                                         @ (Data.List.Split.Internals.Chunk GHC.Types.Char)
+                                         @ GHC.Types.Int
+                                         Day5.day05a4
+                                         (Data.List.Split.Internals.$wpostProcess
+                                            @ GHC.Types.Char
+                                            Data.List.Split.Internals.Drop
+                                            Data.List.Split.Internals.KeepBlankFields
+                                            Data.List.Split.Internals.KeepBlank
+                                            Data.List.Split.Internals.KeepBlank
+                                            (Data.List.Split.Internals.splitInternal
+                                               @ GHC.Types.Char
+                                               Day5.day05a_s
+                                                 `cast`
+                                               (Sym (Data.List.Split.Internals.N:Delimiter[0]
+                                                         <GHC.Types.Char>_R))
+                                               x)))
+                                      ipv
+                                        `cast`
+                                      (GHC.Prim.State#
+                                         (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                              (Nth:0
+                                                   (Nth:2
+                                                        (Nth:3
+                                                             (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                              ->_R ((#,#)
+                                                                      <'GHC.Types.TupleRep '[]>_R
+                                                                      <'GHC.Types.LiftedRep>_R
+                                                                      <GHC.Prim.State#
+                                                                         GHC.Prim.RealWorld>_R
+                                                                      (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                                       (GHC.ST.ST
+                                                                                                                          GHC.Prim.RealWorld)>_N <GHC.Types.Int>_N))_R))))))_R }) of ds1 { (#,#) ipv1 ipv2 ->
+                            ipv2 })
+                           Day5.$fShowCPU2
+                           Day5.day05a_input
+                           (GHC.Types.[] @ GHC.Types.Int)
+                           Day5.$fShowCPU2) of ww { (#,#) ww1 ww2 ->
+                 case ww2 of wild { Day5.CPU ds ds1 ds2 ds3 ds4 ->
+                 GHC.Show.showList__
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt1
+                   ds3
+                   (GHC.Types.[] @ GHC.Types.Char) } }) -}
+bfd800b83dfd40a51fca7604bd3a42cb
+  day05a1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+be70c3f261b79462e57033addce2dd23
+  day05a2 ::
+    GHC.Types.Char
+    -> [GHC.Types.Char -> GHC.Types.Bool]
+    -> [GHC.Types.Char -> GHC.Types.Bool]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U(U)><L,U>m2,
+     Unfolding: (\ (x :: GHC.Types.Char)
+                   (ys :: [GHC.Types.Char -> GHC.Types.Bool])[OneShot] ->
+                 GHC.Types.:
+                   @ (GHC.Types.Char -> GHC.Types.Bool)
+                   (GHC.Classes.eqChar x)
+                   ys) -}
+623d2bd50dbde4a7728a36669b64800b
+  day05a3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (","#) -}
+cbad9041151ada5f5dd23ed798d7a37e
+  day05a4 ::
+    Data.List.Split.Internals.Chunk GHC.Types.Char -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: Data.List.Split.Internals.Chunk
+                           GHC.Types.Char) ->
+                 case Text.Read.readEither8
+                        @ GHC.Types.Int
+                        (Text.ParserCombinators.ReadP.run
+                           @ GHC.Types.Int
+                           Day5.day05a7
+                           (case x of wild {
+                              Data.List.Split.Internals.Delim as -> as
+                              Data.List.Split.Internals.Text as -> as })) of wild {
+                   [] -> Day5.day05a6
+                   : x1 ds
+                   -> case ds of wild1 { [] -> x1 : ipv ipv1 -> Day5.day05a5 } }) -}
+7e1da71882e4d59658f009ff692a5215
+  day05a5 :: GHC.Types.Int
+  {- Strictness: x -}
+8f87cf1b22725053e9bef447b5fc1ef9
+  day05a6 :: GHC.Types.Int
+  {- Strictness: x -}
+72bccd70e3ee416346119d2a3dbfd8ee
+  day05a7 :: Text.ParserCombinators.ReadP.P GHC.Types.Int
+  {- Unfolding: (GHC.Read.$fReadInt_$sreadNumber
+                   GHC.Read.$fReadInt2
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ GHC.Types.Int
+                   (Text.Read.readEither7 @ GHC.Types.Int)) -}
+df8b40b93a8bf4e4d4da4b1ba2304c06
+  day05a_input :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Day5.day05a1
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+b354025e2e894c9b2391b6ae28f463b9
+  day05a_s :: [GHC.Types.Char -> GHC.Types.Bool]
+  {- Unfolding: (GHC.CString.unpackFoldrCString#
+                   @ [GHC.Types.Char -> GHC.Types.Bool]
+                   Day5.day05a3
+                   Day5.day05a2
+                   (GHC.Types.[] @ (GHC.Types.Char -> GHC.Types.Bool))) -}
+656652b70d5f478a0280bc5a59f72eb9
+  day05b :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (x :: [GHC.Types.Char]) ->
+                 case Day5.$wstep
+                        (Day5.CPU
+                           (case GHC.Magic.runRW#
+                                   @ ('GHC.Types.TupleRep
+                                        '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                   @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                        Data.Vector.Vector GHC.Types.Int #)
+                                   (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                    case GHC.Prim.newArray#
+                                           @ GHC.Types.Int
+                                           @ (Control.Monad.Primitive.PrimState
+                                                (GHC.ST.ST GHC.Prim.RealWorld))
+                                           0#
+                                           (Data.Vector.Mutable.uninitialised @ GHC.Types.Int)
+                                           s1
+                                             `cast`
+                                           (GHC.Prim.State#
+                                              (Sym (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                        (Nth:0
+                                                             (Nth:2
+                                                                  (<GHC.Prim.State#
+                                                                      GHC.Prim.RealWorld>_R
+                                                                   ->_R ((#,#)
+                                                                           <'GHC.Types.TupleRep
+                                                                              '[]>_R
+                                                                           <'GHC.Types.LiftedRep>_R
+                                                                           <GHC.Prim.State#
+                                                                              GHC.Prim.RealWorld>_R
+                                                                           (Data.Vector.Generic.Base.Mutable
+                                                                              <Data.Vector.Vector>_N
+                                                                              (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                   <GHC.Prim.RealWorld>_N)
+                                                                              <GHC.Types.Int>_N)_R)_R))))))_R of ds1 { (#,#) ipv ipv1 ->
+                                    Day5.$wfoldlM_loop
+                                      GHC.Types.SPEC
+                                      0#
+                                      0#
+                                      ipv1
+                                        `cast`
+                                      (GHC.Prim.MutableArray#
+                                         (Nth:0
+                                              (Nth:3
+                                                   (Nth:3
+                                                        (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                         ->_R ((#,#)
+                                                                 <'GHC.Types.TupleRep '[]>_R
+                                                                 <'GHC.Types.LiftedRep>_R
+                                                                 <GHC.Prim.State#
+                                                                    GHC.Prim.RealWorld>_R
+                                                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                                  (GHC.ST.ST
+                                                                                                                     GHC.Prim.RealWorld)>_N <GHC.Types.Int>_N))_R)) ; Sub (Data.Vector.D:R:MutableVector[0]) (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                                                                                                                                                  <GHC.Prim.RealWorld>_N) <GHC.Types.Int>_N))
+                                         (Nth:1
+                                              (Nth:3
+                                                   (Nth:3
+                                                        (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                         ->_R ((#,#)
+                                                                 <'GHC.Types.TupleRep '[]>_R
+                                                                 <'GHC.Types.LiftedRep>_R
+                                                                 <GHC.Prim.State#
+                                                                    GHC.Prim.RealWorld>_R
+                                                                 (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                                  (GHC.ST.ST
+                                                                                                                     GHC.Prim.RealWorld)>_N <GHC.Types.Int>_N))_R)) ; Sub (Data.Vector.D:R:MutableVector[0]) (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                                                                                                                                                                                                  <GHC.Prim.RealWorld>_N) <GHC.Types.Int>_N)))_R
+                                      0#
+                                      (GHC.Base.map
+                                         @ (Data.List.Split.Internals.Chunk GHC.Types.Char)
+                                         @ GHC.Types.Int
+                                         Day5.day05a4
+                                         (Data.List.Split.Internals.$wpostProcess
+                                            @ GHC.Types.Char
+                                            Data.List.Split.Internals.Drop
+                                            Data.List.Split.Internals.KeepBlankFields
+                                            Data.List.Split.Internals.KeepBlank
+                                            Data.List.Split.Internals.KeepBlank
+                                            (Data.List.Split.Internals.splitInternal
+                                               @ GHC.Types.Char
+                                               Day5.day05a_s
+                                                 `cast`
+                                               (Sym (Data.List.Split.Internals.N:Delimiter[0]
+                                                         <GHC.Types.Char>_R))
+                                               x)))
+                                      ipv
+                                        `cast`
+                                      (GHC.Prim.State#
+                                         (Control.Monad.Primitive.D:R:PrimStateST[0]
+                                              (Nth:0
+                                                   (Nth:2
+                                                        (Nth:3
+                                                             (<GHC.Prim.State# GHC.Prim.RealWorld>_R
+                                                              ->_R ((#,#)
+                                                                      <'GHC.Types.TupleRep '[]>_R
+                                                                      <'GHC.Types.LiftedRep>_R
+                                                                      <GHC.Prim.State#
+                                                                         GHC.Prim.RealWorld>_R
+                                                                      (Sub (Sym (Data.Vector.D:R:MutableVector[0])) <Control.Monad.Primitive.PrimState
+                                                                                                                       (GHC.ST.ST
+                                                                                                                          GHC.Prim.RealWorld)>_N <GHC.Types.Int>_N))_R))))))_R }) of ds1 { (#,#) ipv1 ipv2 ->
+                            ipv2 })
+                           Day5.$fShowCPU2
+                           Day5.day05b_input
+                           (GHC.Types.[] @ GHC.Types.Int)
+                           Day5.$fShowCPU2) of ww { (#,#) ww1 ww2 ->
+                 case ww2 of wild { Day5.CPU ds ds1 ds2 ds3 ds4 ->
+                 GHC.Show.showList__
+                   @ GHC.Types.Int
+                   GHC.Show.$fShowInt1
+                   ds3
+                   (GHC.Types.[] @ GHC.Types.Char) } }) -}
+451d09d0ef4a521a25d2a8a46f2e4b14
+  day05b1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+d17e6a726c96214f6a43712c02185321
+  day05b_input :: [GHC.Types.Int]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Int
+                   Day5.day05b1
+                   (GHC.Types.[] @ GHC.Types.Int)) -}
+780003e0178d48deb8e8083282f8be3b
+  getPtr :: Day5.Pointer -> GHC.Types.Int
+  RecSel Left Day5.Pointer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (0, True, True)
+                Day5.getPtr1 `cast` (<Day5.Pointer>_R ->_R Day5.N:Pointer[0]) -}
+780003e0178d48deb8e8083282f8be3b
+  getPtr1 :: Day5.Pointer -> Day5.Pointer
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U)>m,
+     Unfolding: InlineRule (1, True, True)
+                (\ (ds :: Day5.Pointer) -> ds) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  inputs :: Day5.CPU -> [GHC.Types.Int]
+  RecSel Left Day5.CPU
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLSLL),1*U(A,A,1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day5.CPU) ->
+                 case ds of wild { Day5.CPU ds1 ds2 ds3 ds4 ds5 -> ds3 }) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  ip :: Day5.CPU -> GHC.Types.Int
+  RecSel Left Day5.CPU
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LSLLL),1*U(A,1*U(U),A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day5.CPU) ->
+                 case ds of wild { Day5.CPU ds1 ds2 ds3 ds4 ds5 -> ds2 }) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  mem :: Day5.CPU -> Data.Vector.Vector GHC.Types.Int
+  RecSel Left Day5.CPU
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(SLLLL),1*U(1*U(U,U,U),A,A,A,A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day5.CPU) ->
+                 case ds of wild { Day5.CPU ds1 ds2 ds3 ds4 ds5 -> ds1 }) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  outputs :: Day5.CPU -> [GHC.Types.Int]
+  RecSel Left Day5.CPU
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLLSL),1*U(A,A,A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day5.CPU) ->
+                 case ds of wild { Day5.CPU ds1 ds2 ds3 ds4 ds5 -> ds4 }) -}
+fada8c6bcf3e00ab65aa1437d9b958b8
+  relativeBase :: Day5.CPU -> GHC.Types.Int
+  RecSel Left Day5.CPU
+  {- Arity: 1, HasNoCafRefs,
+     Strictness: <S(LLLLS),1*U(A,A,A,A,1*U(U))>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Day5.CPU) ->
+                 case ds of wild { Day5.CPU ds1 ds2 ds3 ds4 ds5 -> ds5 }) -}
+85440fc77f1e0a49a0dc6f8e85bd1381
+  toDigits :: GHC.Types.Int -> [GHC.Types.Int]
+  {- Arity: 1, Strictness: <S(S),1*U(U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 case w of ww { GHC.Types.I# ww1 -> Day5.$wtoDigits ww1 }) -}
+877f15686ff6cebccdcc14c6d9dfdcaf
+  toDigits1 :: GHC.Types.Char -> GHC.Types.Int
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ (x :: GHC.Types.Char) ->
+                 case Text.Read.readEither8
+                        @ GHC.Types.Int
+                        (Text.ParserCombinators.ReadP.run
+                           @ GHC.Types.Int
+                           Day5.day05a7
+                           (GHC.Types.:
+                              @ GHC.Types.Char
+                              x
+                              (GHC.Types.[] @ GHC.Types.Char))) of wild {
+                   [] -> Day5.day05a6
+                   : x1 ds
+                   -> case ds of wild1 { [] -> x1 : ipv ipv1 -> Day5.day05a5 } }) -}
+instance GHC.Classes.Eq [Day5.CPU] = Day5.$fEqCPU
+instance GHC.Classes.Eq [Day5.Op] = Day5.$fEqOp
+instance GHC.Classes.Eq [Day5.Param] = Day5.$fEqParam
+instance GHC.Classes.Eq [Day5.Pointer] = Day5.$fEqPointer
+instance GHC.Show.Show [Day5.CPU] = Day5.$fShowCPU
+instance GHC.Show.Show [Day5.Op] = Day5.$fShowOp
+instance GHC.Show.Show [Day5.Param] = Day5.$fShowParam
+instance GHC.Show.Show [Day5.Pointer] = Day5.$fShowPointer
+trusted: none
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+
